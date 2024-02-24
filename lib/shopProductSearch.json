@@ -1,0 +1,1341 @@
+{
+    "shopProductSearch": {
+        "nodes": [
+            {
+                "__typename": "DiscoveryProduct",
+                "id": "3890889162824",
+                "price": {
+                    "amount": "14.97",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "originalPrice": {
+                    "amount": "24.99",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "title": "Black Pocket Crew Tee",
+                "images": [
+                    {
+                        "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/products/3605_BLACK_2-349634.jpg?v=1664470670",
+                        "altText": "",
+                        "sensitive": false,
+                        "width": 1500,
+                        "height": 1500,
+                        "__typename": "Image"
+                    }
+                ],
+                "offers": [],
+                "shopCashOffer": null,
+                "defaultVariantId": "gid://shopify/ProductVariant/29274975666248",
+                "inDefaultProductList": false,
+                "shop": {
+                    "id": "241781",
+                    "name": "True Classic",
+                    "defaultHandle": "fz98qcdn6k",
+                    "__typename": "Shop"
+                },
+                "reviewAnalytics": {
+                    "averageRating": 4.6,
+                    "count": 127,
+                    "__typename": "DiscoveryReviewAnalytics"
+                }
+            },
+            {
+                "__typename": "DiscoveryProduct",
+                "id": "6659232268360",
+                "price": {
+                    "amount": "99.99",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "originalPrice": {
+                    "amount": "149.94",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "title": "The Staple 6-Pack",
+                "images": [
+                    {
+                        "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/products/STAPLE_6PACK.jpg?v=1665696267",
+                        "altText": "",
+                        "sensitive": false,
+                        "width": 1500,
+                        "height": 1500,
+                        "__typename": "Image"
+                    }
+                ],
+                "offers": [],
+                "shopCashOffer": null,
+                "defaultVariantId": "gid://shopify/ProductVariant/39614586552392",
+                "inDefaultProductList": false,
+                "shop": {
+                    "id": "241781",
+                    "name": "True Classic",
+                    "defaultHandle": "fz98qcdn6k",
+                    "__typename": "Shop"
+                },
+                "reviewAnalytics": {
+                    "averageRating": 4.5,
+                    "count": 1722,
+                    "__typename": "DiscoveryReviewAnalytics"
+                }
+            },
+            {
+                "__typename": "DiscoveryProduct",
+                "id": "3891534561352",
+                "price": {
+                    "amount": "24.99",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "originalPrice": null,
+                "title": "Black Crew Neck T-Shirt",
+                "images": [
+                    {
+                        "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/files/4000_BLACK_2.jpg?v=1692393566",
+                        "altText": "M",
+                        "sensitive": false,
+                        "width": 2159,
+                        "height": 2700,
+                        "__typename": "Image"
+                    }
+                ],
+                "offers": [],
+                "shopCashOffer": null,
+                "defaultVariantId": "gid://shopify/ProductVariant/29275989049416",
+                "inDefaultProductList": false,
+                "shop": {
+                    "id": "241781",
+                    "name": "True Classic",
+                    "defaultHandle": "fz98qcdn6k",
+                    "__typename": "Shop"
+                },
+                "reviewAnalytics": {
+                    "averageRating": 4.5,
+                    "count": 357,
+                    "__typename": "DiscoveryReviewAnalytics"
+                }
+            },
+            {
+                "__typename": "DiscoveryProduct",
+                "id": "6624049758280",
+                "price": {
+                    "amount": "29.99",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "originalPrice": null,
+                "title": "Black Active Crew Neck T-Shirt",
+                "images": [
+                    {
+                        "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/files/4003_BLACK_2.jpg?v=1692677567",
+                        "altText": "",
+                        "sensitive": false,
+                        "width": 2159,
+                        "height": 2700,
+                        "__typename": "Image"
+                    }
+                ],
+                "offers": [],
+                "shopCashOffer": null,
+                "defaultVariantId": "gid://shopify/ProductVariant/39476535951432",
+                "inDefaultProductList": false,
+                "shop": {
+                    "id": "241781",
+                    "name": "True Classic",
+                    "defaultHandle": "fz98qcdn6k",
+                    "__typename": "Shop"
+                },
+                "reviewAnalytics": {
+                    "averageRating": 4.7,
+                    "count": 361,
+                    "__typename": "DiscoveryReviewAnalytics"
+                }
+            },
+            {
+                "__typename": "DiscoveryProduct",
+                "id": "6624132399176",
+                "price": {
+                    "amount": "69.99",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "originalPrice": {
+                    "amount": "89.97",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "title": "The Heather Color Active Crew Neck T-Shirt 3-Pack",
+                "images": [
+                    {
+                        "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/products/4003_2_26e44641-d5f3-48e5-9309-d05bb6712adf.jpg?v=1657659726",
+                        "altText": "",
+                        "sensitive": false,
+                        "width": 1500,
+                        "height": 1500,
+                        "__typename": "Image"
+                    }
+                ],
+                "offers": [],
+                "shopCashOffer": null,
+                "defaultVariantId": "gid://shopify/ProductVariant/39476891287624",
+                "inDefaultProductList": false,
+                "shop": {
+                    "id": "241781",
+                    "name": "True Classic",
+                    "defaultHandle": "fz98qcdn6k",
+                    "__typename": "Shop"
+                },
+                "reviewAnalytics": {
+                    "averageRating": 4.7,
+                    "count": 105,
+                    "__typename": "DiscoveryReviewAnalytics"
+                }
+            },
+            {
+                "__typename": "DiscoveryProduct",
+                "id": "6624131383368",
+                "price": {
+                    "amount": "69.99",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "originalPrice": {
+                    "amount": "89.97",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "title": "The Standard Active Crew Neck T-Shirt 3-Pack",
+                "images": [
+                    {
+                        "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/products/4003_1_ada32f9f-c3df-4c4e-bf9d-70280d313ab5.jpg?v=1657660203",
+                        "altText": "",
+                        "sensitive": false,
+                        "width": 1500,
+                        "height": 1500,
+                        "__typename": "Image"
+                    }
+                ],
+                "offers": [],
+                "shopCashOffer": null,
+                "defaultVariantId": "gid://shopify/ProductVariant/39476889616456",
+                "inDefaultProductList": false,
+                "shop": {
+                    "id": "241781",
+                    "name": "True Classic",
+                    "defaultHandle": "fz98qcdn6k",
+                    "__typename": "Shop"
+                },
+                "reviewAnalytics": {
+                    "averageRating": 4.6,
+                    "count": 68,
+                    "__typename": "DiscoveryReviewAnalytics"
+                }
+            },
+            {
+                "__typename": "DiscoveryProduct",
+                "id": "3975161217096",
+                "price": {
+                    "amount": "59.99",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "originalPrice": {
+                    "amount": "74.97",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "title": "The Classic 3-Pack",
+                "images": [
+                    {
+                        "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/products/CLASSIC_3PACK.jpg?v=1657569842",
+                        "altText": "",
+                        "sensitive": false,
+                        "width": 1500,
+                        "height": 1500,
+                        "__typename": "Image"
+                    }
+                ],
+                "offers": [],
+                "shopCashOffer": null,
+                "defaultVariantId": "gid://shopify/ProductVariant/29631217991752",
+                "inDefaultProductList": false,
+                "shop": {
+                    "id": "241781",
+                    "name": "True Classic",
+                    "defaultHandle": "fz98qcdn6k",
+                    "__typename": "Shop"
+                },
+                "reviewAnalytics": {
+                    "averageRating": 4.4,
+                    "count": 786,
+                    "__typename": "DiscoveryReviewAnalytics"
+                }
+            },
+            {
+                "__typename": "DiscoveryProduct",
+                "id": "3975155253320",
+                "price": {
+                    "amount": "59.99",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "originalPrice": {
+                    "amount": "74.97",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "title": "All White 3-Pack",
+                "images": [
+                    {
+                        "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/products/ALLWHITECREW_3PACK.jpg?v=1696439655",
+                        "altText": "",
+                        "sensitive": false,
+                        "width": 1500,
+                        "height": 1500,
+                        "__typename": "Image"
+                    }
+                ],
+                "offers": [],
+                "shopCashOffer": null,
+                "defaultVariantId": "gid://shopify/ProductVariant/29631194595400",
+                "inDefaultProductList": false,
+                "shop": {
+                    "id": "241781",
+                    "name": "True Classic",
+                    "defaultHandle": "fz98qcdn6k",
+                    "__typename": "Shop"
+                },
+                "reviewAnalytics": {
+                    "averageRating": 4.5,
+                    "count": 343,
+                    "__typename": "DiscoveryReviewAnalytics"
+                }
+            },
+            {
+                "__typename": "DiscoveryProduct",
+                "id": "5855427919944",
+                "price": {
+                    "amount": "14.97",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "originalPrice": {
+                    "amount": "24.99",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "title": "Carbon Pocket Crew Tee",
+                "images": [
+                    {
+                        "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/products/4400_CARBON_2.jpg?v=1664470675",
+                        "altText": "",
+                        "sensitive": false,
+                        "width": 1500,
+                        "height": 1500,
+                        "__typename": "Image"
+                    }
+                ],
+                "offers": [],
+                "shopCashOffer": null,
+                "defaultVariantId": "gid://shopify/ProductVariant/36460318556232",
+                "inDefaultProductList": false,
+                "shop": {
+                    "id": "241781",
+                    "name": "True Classic",
+                    "defaultHandle": "fz98qcdn6k",
+                    "__typename": "Shop"
+                },
+                "reviewAnalytics": {
+                    "averageRating": 4.5,
+                    "count": 37,
+                    "__typename": "DiscoveryReviewAnalytics"
+                }
+            },
+            {
+                "__typename": "DiscoveryProduct",
+                "id": "5855458295880",
+                "price": {
+                    "amount": "9.97",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "originalPrice": {
+                    "amount": "24.99",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "title": "Bluestone Tall Round Hem Crew Neck T-Shirt",
+                "images": [
+                    {
+                        "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/products/4500_BLUESTONE_2.jpg?v=1660926137",
+                        "altText": "",
+                        "sensitive": false,
+                        "width": 1500,
+                        "height": 1500,
+                        "__typename": "Image"
+                    }
+                ],
+                "offers": [],
+                "shopCashOffer": null,
+                "defaultVariantId": "gid://shopify/ProductVariant/36460376981576",
+                "inDefaultProductList": false,
+                "shop": {
+                    "id": "241781",
+                    "name": "True Classic",
+                    "defaultHandle": "fz98qcdn6k",
+                    "__typename": "Shop"
+                },
+                "reviewAnalytics": {
+                    "averageRating": 4.2,
+                    "count": 148,
+                    "__typename": "DiscoveryReviewAnalytics"
+                }
+            },
+            {
+                "__typename": "DiscoveryProduct",
+                "id": "5855443583048",
+                "price": {
+                    "amount": "14.97",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "originalPrice": {
+                    "amount": "24.99",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "title": "Heather Gray Pocket Crew Tee",
+                "images": [
+                    {
+                        "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/products/4400_HEATHERGREY_2.jpg?v=1664470807",
+                        "altText": "",
+                        "sensitive": false,
+                        "width": 1500,
+                        "height": 1500,
+                        "__typename": "Image"
+                    }
+                ],
+                "offers": [],
+                "shopCashOffer": null,
+                "defaultVariantId": "gid://shopify/ProductVariant/36460344213576",
+                "inDefaultProductList": false,
+                "shop": {
+                    "id": "241781",
+                    "name": "True Classic",
+                    "defaultHandle": "fz98qcdn6k",
+                    "__typename": "Shop"
+                },
+                "reviewAnalytics": {
+                    "averageRating": 4.3,
+                    "count": 48,
+                    "__typename": "DiscoveryReviewAnalytics"
+                }
+            },
+            {
+                "__typename": "DiscoveryProduct",
+                "id": "3891505496136",
+                "price": {
+                    "amount": "24.99",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "originalPrice": null,
+                "title": "White Crew Neck T-Shirt",
+                "images": [
+                    {
+                        "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/files/4000-White-01_b366e3f0-dc71-49ca-b7f5-65ae232c87b1.jpg?v=1696439790",
+                        "altText": "M",
+                        "sensitive": false,
+                        "width": 2160,
+                        "height": 2700,
+                        "__typename": "Image"
+                    }
+                ],
+                "offers": [],
+                "shopCashOffer": null,
+                "defaultVariantId": "gid://shopify/ProductVariant/29275946844232",
+                "inDefaultProductList": false,
+                "shop": {
+                    "id": "241781",
+                    "name": "True Classic",
+                    "defaultHandle": "fz98qcdn6k",
+                    "__typename": "Shop"
+                },
+                "reviewAnalytics": {
+                    "averageRating": 4.3,
+                    "count": 153,
+                    "__typename": "DiscoveryReviewAnalytics"
+                }
+            },
+            {
+                "__typename": "DiscoveryProduct",
+                "id": "4262284492872",
+                "price": {
+                    "amount": "16.97",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "originalPrice": {
+                    "amount": "24.99",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "title": "White Tall Round Hem Crew Neck T-Shirt",
+                "images": [
+                    {
+                        "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/files/4500_WHITE_2.jpg?v=1692634421",
+                        "altText": "",
+                        "sensitive": false,
+                        "width": 2159,
+                        "height": 2700,
+                        "__typename": "Image"
+                    }
+                ],
+                "offers": [],
+                "shopCashOffer": null,
+                "defaultVariantId": "gid://shopify/ProductVariant/39659590811720",
+                "inDefaultProductList": false,
+                "shop": {
+                    "id": "241781",
+                    "name": "True Classic",
+                    "defaultHandle": "fz98qcdn6k",
+                    "__typename": "Shop"
+                },
+                "reviewAnalytics": {
+                    "averageRating": 4.5,
+                    "count": 34,
+                    "__typename": "DiscoveryReviewAnalytics"
+                }
+            },
+            {
+                "__typename": "DiscoveryProduct",
+                "id": "6737731125320",
+                "price": {
+                    "amount": "59.99",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "originalPrice": {
+                    "amount": "74.97",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "title": "Blues Crew Neck T-Shirt 3-Pack",
+                "images": [
+                    {
+                        "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/products/BluesCrewNeckT-Shirt3-Pack.jpg?v=1678811100",
+                        "altText": "",
+                        "sensitive": false,
+                        "width": 732,
+                        "height": 732,
+                        "__typename": "Image"
+                    }
+                ],
+                "offers": [],
+                "shopCashOffer": null,
+                "defaultVariantId": "gid://shopify/ProductVariant/39878823444552",
+                "inDefaultProductList": false,
+                "shop": {
+                    "id": "241781",
+                    "name": "True Classic",
+                    "defaultHandle": "fz98qcdn6k",
+                    "__typename": "Shop"
+                },
+                "reviewAnalytics": {
+                    "averageRating": 4.6,
+                    "count": 271,
+                    "__typename": "DiscoveryReviewAnalytics"
+                }
+            },
+            {
+                "__typename": "DiscoveryProduct",
+                "id": "6754771632200",
+                "price": {
+                    "amount": "49.99",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "originalPrice": {
+                    "amount": "74.97",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "title": "All Black Tall Straight Hem Crew Neck T-Shirt 3-Pack",
+                "images": [
+                    {
+                        "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/products/TallStraightHemCrew.jpg?v=1681864086",
+                        "altText": "",
+                        "sensitive": false,
+                        "width": 1500,
+                        "height": 1500,
+                        "__typename": "Image"
+                    }
+                ],
+                "offers": [],
+                "shopCashOffer": null,
+                "defaultVariantId": "gid://shopify/ProductVariant/39931824341064",
+                "inDefaultProductList": false,
+                "shop": {
+                    "id": "241781",
+                    "name": "True Classic",
+                    "defaultHandle": "fz98qcdn6k",
+                    "__typename": "Shop"
+                },
+                "reviewAnalytics": {
+                    "averageRating": 4.7,
+                    "count": 63,
+                    "__typename": "DiscoveryReviewAnalytics"
+                }
+            },
+            {
+                "__typename": "DiscoveryProduct",
+                "id": "3891553173576",
+                "price": {
+                    "amount": "24.99",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "originalPrice": null,
+                "title": "Navy Crew Neck T-Shirt",
+                "images": [
+                    {
+                        "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/files/4000_NAVY_2.jpg?v=1692396637",
+                        "altText": "M",
+                        "sensitive": false,
+                        "width": 2159,
+                        "height": 2700,
+                        "__typename": "Image"
+                    }
+                ],
+                "offers": [],
+                "shopCashOffer": null,
+                "defaultVariantId": "gid://shopify/ProductVariant/29276034170952",
+                "inDefaultProductList": false,
+                "shop": {
+                    "id": "241781",
+                    "name": "True Classic",
+                    "defaultHandle": "fz98qcdn6k",
+                    "__typename": "Shop"
+                },
+                "reviewAnalytics": {
+                    "averageRating": 4.6,
+                    "count": 155,
+                    "__typename": "DiscoveryReviewAnalytics"
+                }
+            },
+            {
+                "__typename": "DiscoveryProduct",
+                "id": "5855450628168",
+                "price": {
+                    "amount": "14.97",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "originalPrice": {
+                    "amount": "24.99",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "title": "Military Green Pocket Crew Tee",
+                "images": [
+                    {
+                        "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/products/4400_MILITARYGREEN_2.jpg?v=1664470688",
+                        "altText": "",
+                        "sensitive": false,
+                        "width": 1500,
+                        "height": 1500,
+                        "__typename": "Image"
+                    }
+                ],
+                "offers": [],
+                "shopCashOffer": null,
+                "defaultVariantId": "gid://shopify/ProductVariant/36460351946824",
+                "inDefaultProductList": false,
+                "shop": {
+                    "id": "241781",
+                    "name": "True Classic",
+                    "defaultHandle": "fz98qcdn6k",
+                    "__typename": "Shop"
+                },
+                "reviewAnalytics": {
+                    "averageRating": 4.4,
+                    "count": 33,
+                    "__typename": "DiscoveryReviewAnalytics"
+                }
+            },
+            {
+                "__typename": "DiscoveryProduct",
+                "id": "6555004928072",
+                "price": {
+                    "amount": "14.97",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "originalPrice": {
+                    "amount": "24.99",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "title": "Burgundy Crew Neck T-Shirt",
+                "images": [
+                    {
+                        "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/products/4000_BURGUNDY_2.jpg?v=1660925850",
+                        "altText": "",
+                        "sensitive": false,
+                        "width": 1500,
+                        "height": 1500,
+                        "__typename": "Image"
+                    }
+                ],
+                "offers": [],
+                "shopCashOffer": null,
+                "defaultVariantId": "gid://shopify/ProductVariant/39301186256968",
+                "inDefaultProductList": false,
+                "shop": {
+                    "id": "241781",
+                    "name": "True Classic",
+                    "defaultHandle": "fz98qcdn6k",
+                    "__typename": "Shop"
+                },
+                "reviewAnalytics": {
+                    "averageRating": 4.5,
+                    "count": 116,
+                    "__typename": "DiscoveryReviewAnalytics"
+                }
+            },
+            {
+                "__typename": "DiscoveryProduct",
+                "id": "6741074837576",
+                "price": {
+                    "amount": "109.99",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "originalPrice": {
+                    "amount": "179.94",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "title": "Heather Staple Active Short Sleeve Crew T-Shirt 6-Pack",
+                "images": [
+                    {
+                        "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/products/HeatherStapleActiveShortSleeveCrewTshirt6pack.jpg?v=1679513975",
+                        "altText": "",
+                        "sensitive": false,
+                        "width": 1500,
+                        "height": 1500,
+                        "__typename": "Image"
+                    }
+                ],
+                "offers": [],
+                "shopCashOffer": null,
+                "defaultVariantId": "gid://shopify/ProductVariant/39889956929608",
+                "inDefaultProductList": false,
+                "shop": {
+                    "id": "241781",
+                    "name": "True Classic",
+                    "defaultHandle": "fz98qcdn6k",
+                    "__typename": "Shop"
+                },
+                "reviewAnalytics": {
+                    "averageRating": 4.8,
+                    "count": 40,
+                    "__typename": "DiscoveryReviewAnalytics"
+                }
+            },
+            {
+                "__typename": "DiscoveryProduct",
+                "id": "3975135821896",
+                "price": {
+                    "amount": "59.99",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "originalPrice": {
+                    "amount": "74.97",
+                    "currencyCode": "USD",
+                    "__typename": "MoneyV2"
+                },
+                "title": "All Black 3-Pack",
+                "images": [
+                    {
+                        "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/products/ALLBLACKCREW_3PACK.jpg?v=1657336036",
+                        "altText": "",
+                        "sensitive": false,
+                        "width": 1500,
+                        "height": 1500,
+                        "__typename": "Image"
+                    }
+                ],
+                "offers": [],
+                "shopCashOffer": null,
+                "defaultVariantId": "gid://shopify/ProductVariant/29631009914952",
+                "inDefaultProductList": false,
+                "shop": {
+                    "id": "241781",
+                    "name": "True Classic",
+                    "defaultHandle": "fz98qcdn6k",
+                    "__typename": "Shop"
+                },
+                "reviewAnalytics": {
+                    "averageRating": 4.4,
+                    "count": 748,
+                    "__typename": "DiscoveryReviewAnalytics"
+                }
+            }
+        ],
+        "productFilters": [
+            {
+                "key": "all",
+                "defaultValue": null,
+                "value": null,
+                "configurations": [
+                    {
+                        "__typename": "ProductFilterPillConfiguration",
+                        "title": "Filter",
+                        "icon": "filter",
+                        "screenTitle": null,
+                        "filterKind": "ALL",
+                        "position": 1,
+                        "options": []
+                    }
+                ],
+                "__typename": "ProductFilter"
+            },
+            {
+                "key": "sortBy",
+                "defaultValue": null,
+                "value": null,
+                "configurations": [
+                    {
+                        "__typename": "ProductFilterPillConfiguration",
+                        "title": "Sort by",
+                        "icon": "down-chevron",
+                        "screenTitle": "Sort by",
+                        "filterKind": "RADIO",
+                        "position": 2,
+                        "options": [
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": "Best selling",
+                                "value": "MOST_SALES",
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": "Newest",
+                                "value": "MOST_RECENT",
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": "Price: Low - High",
+                                "value": "PRICE_LOW_TO_HIGH",
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": "Price: High - Low",
+                                "value": "PRICE_HIGH_TO_LOW",
+                                "__typename": "FilterOption"
+                            }
+                        ]
+                    },
+                    {
+                        "__typename": "ProductFilterSheetConfiguration",
+                        "title": "Sort by",
+                        "icon": null,
+                        "screenTitle": "Sort by",
+                        "filterKind": "RADIO",
+                        "position": 1,
+                        "refreshOnUpdate": false,
+                        "refreshOptionsOnUpdate": true,
+                        "options": [
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": "Best selling",
+                                "value": "MOST_SALES",
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": "Newest",
+                                "value": "MOST_RECENT",
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": "Price: Low - High",
+                                "value": "PRICE_LOW_TO_HIGH",
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": "Price: High - Low",
+                                "value": "PRICE_HIGH_TO_LOW",
+                                "__typename": "FilterOption"
+                            }
+                        ]
+                    }
+                ],
+                "__typename": "ProductFilter"
+            },
+            {
+                "key": "onSale",
+                "defaultValue": false,
+                "value": false,
+                "configurations": [
+                    {
+                        "__typename": "ProductFilterSheetConfiguration",
+                        "title": "On sale",
+                        "icon": null,
+                        "screenTitle": null,
+                        "filterKind": "TOGGLE",
+                        "position": 6,
+                        "refreshOnUpdate": false,
+                        "refreshOptionsOnUpdate": true,
+                        "options": [
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": {
+                                    "checked": false
+                                },
+                                "icon": null,
+                                "label": null,
+                                "value": false,
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": {
+                                    "checked": true
+                                },
+                                "icon": null,
+                                "label": null,
+                                "value": true,
+                                "__typename": "FilterOption"
+                            }
+                        ]
+                    },
+                    {
+                        "__typename": "ProductFilterPillConfiguration",
+                        "title": "On sale",
+                        "icon": null,
+                        "screenTitle": null,
+                        "filterKind": "TOGGLE",
+                        "position": 7,
+                        "options": [
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": {
+                                    "checked": false
+                                },
+                                "icon": null,
+                                "label": null,
+                                "value": false,
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": {
+                                    "checked": true
+                                },
+                                "icon": null,
+                                "label": null,
+                                "value": true,
+                                "__typename": "FilterOption"
+                            }
+                        ]
+                    }
+                ],
+                "__typename": "ProductFilter"
+            },
+            {
+                "key": "price",
+                "defaultValue": {},
+                "value": {},
+                "configurations": [
+                    {
+                        "__typename": "ProductFilterSheetConfiguration",
+                        "title": "Price",
+                        "icon": null,
+                        "screenTitle": "Price",
+                        "filterKind": "PRICE",
+                        "position": 8,
+                        "refreshOnUpdate": false,
+                        "refreshOptionsOnUpdate": true,
+                        "options": [
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": null,
+                                "value": {
+                                    "max": 50
+                                },
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": null,
+                                "value": {
+                                    "min": 50,
+                                    "max": 100
+                                },
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": null,
+                                "value": {
+                                    "min": 100,
+                                    "max": 250
+                                },
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": null,
+                                "value": {
+                                    "min": 250
+                                },
+                                "__typename": "FilterOption"
+                            }
+                        ]
+                    }
+                ],
+                "__typename": "ProductFilter"
+            },
+            {
+                "key": "inStock",
+                "defaultValue": false,
+                "value": true,
+                "configurations": [
+                    {
+                        "__typename": "ProductFilterSheetConfiguration",
+                        "title": "In-stock",
+                        "icon": null,
+                        "screenTitle": null,
+                        "filterKind": "TOGGLE",
+                        "position": 9,
+                        "refreshOnUpdate": false,
+                        "refreshOptionsOnUpdate": true,
+                        "options": [
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": {
+                                    "checked": false
+                                },
+                                "icon": null,
+                                "label": null,
+                                "value": false,
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": {
+                                    "checked": true
+                                },
+                                "icon": null,
+                                "label": null,
+                                "value": true,
+                                "__typename": "FilterOption"
+                            }
+                        ]
+                    },
+                    {
+                        "__typename": "ProductFilterPillConfiguration",
+                        "title": "In stock",
+                        "icon": null,
+                        "screenTitle": null,
+                        "filterKind": "TOGGLE",
+                        "position": 9,
+                        "options": [
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": {
+                                    "checked": false
+                                },
+                                "icon": null,
+                                "label": null,
+                                "value": false,
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": {
+                                    "checked": true
+                                },
+                                "icon": null,
+                                "label": null,
+                                "value": true,
+                                "__typename": "FilterOption"
+                            }
+                        ]
+                    }
+                ],
+                "__typename": "ProductFilter"
+            },
+            {
+                "key": "category",
+                "defaultValue": null,
+                "value": null,
+                "configurations": [
+                    {
+                        "__typename": "ProductFilterPillConfiguration",
+                        "title": "Category",
+                        "icon": "down-chevron",
+                        "screenTitle": "Category",
+                        "filterKind": "RADIO",
+                        "position": 5,
+                        "options": [
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": "Sale",
+                                "value": 268271026248,
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": "Tops",
+                                "value": 266727260232,
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": "Crew Neck T-Shirts",
+                                "value": 137100984392,
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": "V-Neck T-Shirts",
+                                "value": 137101181000,
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": "Polo Shirts",
+                                "value": 261966594120,
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": "Button Up Shirts",
+                                "value": 268046336072,
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": "Activewear",
+                                "value": 266533634120,
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": "Bottoms",
+                                "value": 262876069960,
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": "Shorts",
+                                "value": 266873208904,
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": "Jeans",
+                                "value": 267399954504,
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": "Chinos",
+                                "value": 266844209224,
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": "Joggers",
+                                "value": 266711040072,
+                                "__typename": "FilterOption"
+                            }
+                        ]
+                    },
+                    {
+                        "__typename": "ProductFilterSheetConfiguration",
+                        "title": "Category",
+                        "icon": null,
+                        "screenTitle": "Category",
+                        "filterKind": "RADIO",
+                        "position": 4,
+                        "refreshOnUpdate": false,
+                        "refreshOptionsOnUpdate": true,
+                        "options": [
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": "Sale",
+                                "value": 268271026248,
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": "Tops",
+                                "value": 266727260232,
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": "Crew Neck T-Shirts",
+                                "value": 137100984392,
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": "V-Neck T-Shirts",
+                                "value": 137101181000,
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": "Polo Shirts",
+                                "value": 261966594120,
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": "Button Up Shirts",
+                                "value": 268046336072,
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": "Activewear",
+                                "value": 266533634120,
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": "Bottoms",
+                                "value": 262876069960,
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": "Shorts",
+                                "value": 266873208904,
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": "Jeans",
+                                "value": 267399954504,
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": "Chinos",
+                                "value": 266844209224,
+                                "__typename": "FilterOption"
+                            },
+                            {
+                                "accessibilityLabel": null,
+                                "configuration": null,
+                                "icon": null,
+                                "label": "Joggers",
+                                "value": 266711040072,
+                                "__typename": "FilterOption"
+                            }
+                        ]
+                    }
+                ],
+                "__typename": "ProductFilter"
+            }
+        ],
+        "pageInfo": {
+            "hasNextPage": true,
+            "endCursor": "eyJjdXJzb3JzIjp7ImZyb20iOlsyMF0sInF1ZXJ5X2lkIjpbImdNMlZnY2ljbzFzdzlaWkciXX19",
+            "__typename": "PageInfo"
+        },
+        "filter": {
+            "network": "ALL",
+            "__typename": "SearchFilterResult"
+        },
+        "inferredCategoryFilters": [],
+        "totalCount": 895,
+        "totalCountCapped": false,
+        "inferredQueryType": null,
+        "__typename": "ProductSearchConnection"
+    }
+}
