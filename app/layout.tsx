@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/modules/common/theme-provider";
 import { ThemeToggle } from "@/modules/common/theme-toggle";
+import { cn } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,17 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-          <ThemeToggle />
-        </ThemeProvider>
-      </body>
+      <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <body className={cn(inter.className, "max-w-5xl mx-auto")}>{children}</body>
+        <ThemeToggle />
+      </ThemeProvider>
     </html>
   );
 }

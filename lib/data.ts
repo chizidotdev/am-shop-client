@@ -1,3 +1,5 @@
-import shopProductSearch from './shopProductSearch.json';
+import shopProductSearch from "./shopProductSearch.json";
 
-export const shopProductSearchData = JSON.parse(JSON.stringify(shopProductSearch));
+export const shopProductSearchData: ShopProductSearch[] = JSON.parse(
+  JSON.stringify(shopProductSearch),
+).nodes;
