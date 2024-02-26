@@ -7,7 +7,7 @@ export default function Home() {
   console.log(">>>>", shopProductSearchData);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-5">
+    <main className="flex min-h-screen flex-col items-center justify-between">
       <Button>Click me</Button>
 
       <div className="product-grid w-full mt-10">

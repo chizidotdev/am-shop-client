@@ -1,11 +1,12 @@
 import Image from "next/image";
 import React from "react";
 import { Text } from "@/ui/text";
-import { formatCurrency, cn } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 import { BiSolidPurchaseTag } from "react-icons/bi";
 import { BsHeart, BsHeartFill } from "react-icons/bs";
+import { ProductPrice } from "./product-price";
 
-export const ProductCard = ({ product }: { product: ShopProductSearch }) => {
+export const ProductCard = ({ product }: { product: DiscoveryProduct }) => {
   const [liked, setLiked] = React.useState(false);
   const { images, title, originalPrice, price } = product;
   const discount = originalPrice
@@ -50,21 +51,12 @@ export const ProductCard = ({ product }: { product: ShopProductSearch }) => {
         </button>
       </div>
 
-      <div className="mt-2">
+      <div className="mt-2 text-sm">
         <Text asLabel className="font-semibold">
           {title}
         </Text>
 
-        <div className="text-sm font-bold flex items-center gap-2">
-          <Text className={cn(originalPrice && "text-red-500 dark:text-red-600")}>
-            {formatCurrency(Number(price.amount), price.currencyCode)}
-          </Text>
-          {originalPrice && (
-            <Text className="line-through text-muted-foreground">
-              {formatCurrency(Number(originalPrice.amount), originalPrice.currencyCode)}
-            </Text>
-          )}
-        </div>
+        <ProductPrice price={price} originalPrice={originalPrice} />
       </div>
     </div>
   );

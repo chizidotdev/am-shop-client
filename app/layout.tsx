@@ -18,11 +18,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-        <body className={cn(inter.className, "max-w-5xl mx-auto")}>{children}</body>
-        <ThemeToggle />
-      </ThemeProvider>
+    <html lang="en" suppressHydrationWarning>
+      <body className={cn(inter.className)}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="relative max-w-5xl mx-auto p-5">{children}</div>
+          <ThemeToggle />
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

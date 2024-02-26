@@ -1,0 +1,644 @@
+{
+  "id": "3890889162824",
+  "title": "Black Pocket Crew Tee",
+  "descriptionHtml": "\n<p><strong><b>This item is </b><b><i>FINAL SALE</i></b><b> and is not eligible for exchanges or refunds.</b></strong></p>\n<p><strong>Features: </strong></p>\n<ul>\n<li>Premium fitted crew neck pocket t-shirt</li>\n<li>60% combed ringspun cotton/40% polyester jersey</li>\n<li>Fabric will shrink minimally (5%) on a low heat setting in the dryer</li>\n<li>Classic side seam for the best look &amp; fit</li>\n<li>Soft tag – tag is screen-printed on the tee for maximum comfort</li>\n</ul>\n<p><strong>Fit: </strong></p>\n<ul>\n<li>This is a contemporary/athletic cut </li>\n<li>\n<p>Model is 6'1\" and wearing size M</p>\n</li>\n</ul>\n<ul></ul>",
+  "description": "\nThis item is FINAL SALE and is not eligible for exchanges or refunds.\nFeatures: \n\nPremium fitted crew neck pocket t-shirt\n60% combed ringspun cotton/40% polyester jersey\nFabric will shrink minimally (5%) on a low heat setting in the dryer\nClassic side seam for the best look & fit\nSoft tag – tag is screen-printed on the tee for maximum comfort\n\nFit: \n\nThis is a contemporary/athletic cut \n\nModel is 6'1\" and wearing size M\n\n\n",
+  "onlineStoreUrl": "https://www.trueclassictees.com/products/black-pocket-crew-tee",
+  "productDrop": null,
+  "offers": [],
+  "shop": {
+    "id": "241781",
+    "name": "True Classic",
+    "followedByMe": null,
+    "defaultHandle": "fz98qcdn6k",
+    "websiteUrl": "https://www.trueclassictees.com?utm_source=shop_app",
+    "shopWebDisabled": false,
+    "inAppVisibilityStatus": "VISIBLE_AND_DISCOVERABLE",
+    "shopCashOffer": null,
+    "offers": [],
+    "visualTheme": {
+      "id": "visual-theme-241781",
+      "logoImage": {
+        "url": "https://cdn.shopify.com/shop-assets/shopify_brokers/trueclassictees-com.myshopify.com/1706552098/logo.png?format=webp",
+        "altText": null,
+        "height": null,
+        "width": null,
+        "sensitive": false,
+        "__typename": "Image"
+      },
+      "featuredImages": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/files/4000_BLACK_2.jpg?v=1692393566",
+          "altText": null,
+          "height": null,
+          "width": null,
+          "sensitive": false,
+          "__typename": "Image"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/products/STAPLE_6PACK.jpg?v=1665696267",
+          "altText": null,
+          "height": null,
+          "width": null,
+          "sensitive": false,
+          "__typename": "Image"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/files/4000-White-01_b366e3f0-dc71-49ca-b7f5-65ae232c87b1.jpg?v=1696439790",
+          "altText": null,
+          "height": null,
+          "width": null,
+          "sensitive": false,
+          "__typename": "Image"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/products/COLOR_3PACK_585fb834-1307-47ee-b52a-20dbbbf08955.jpg?v=1657570179",
+          "altText": null,
+          "height": null,
+          "width": null,
+          "sensitive": false,
+          "__typename": "Image"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/files/essentialcrewtshirt9pack.jpg?v=1703728095",
+          "altText": null,
+          "height": null,
+          "width": null,
+          "sensitive": false,
+          "__typename": "Image"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/products/CLASSIC_3PACK.jpg?v=1657569842",
+          "altText": null,
+          "height": null,
+          "width": null,
+          "sensitive": false,
+          "__typename": "Image"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/files/4000_NAVY_2.jpg?v=1692396637",
+          "altText": null,
+          "height": null,
+          "width": null,
+          "sensitive": false,
+          "__typename": "Image"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/files/4000_CARBON_2.jpg?v=1692393983",
+          "altText": null,
+          "height": null,
+          "width": null,
+          "sensitive": false,
+          "__typename": "Image"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/files/4000-HeatherGray-01.jpg?v=1696439532",
+          "altText": null,
+          "height": null,
+          "width": null,
+          "sensitive": false,
+          "__typename": "Image"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/files/4000_MILITARYGREEN_2.jpg?v=1692396511",
+          "altText": null,
+          "height": null,
+          "width": null,
+          "sensitive": false,
+          "__typename": "Image"
+        }
+      ],
+      "__typename": "VisualTheme"
+    },
+    "policies": {
+      "shippingPolicy": {
+        "embedUrl": "https://checkout.shopify.com/22040084552/policies/11703091272.html?locale=en",
+        "__typename": "Policy"
+      },
+      "returnPolicy": {
+        "embedUrl": "https://checkout.shopify.com/22040084552/policies/11702992968.html?locale=en",
+        "__typename": "Policy"
+      },
+      "__typename": "Policies"
+    },
+    "productReviewAnalytics": {
+      "totalProductReviews": 33078,
+      "averageRating": 4.499,
+      "__typename": "ShopProductReviewAnalytics"
+    },
+    "shopCashCampaignValue": {
+      "amount": "50.0",
+      "currencyCode": "NGN",
+      "__typename": "MoneyV2"
+    },
+    "__typename": "Shop"
+  },
+  "media": {
+    "nodes": [
+      {
+        "mediaContentType": "IMAGE",
+        "alt": "",
+        "id": "gid://shopify/MediaImage/8397318357064",
+        "image": {
+          "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/products/3605_BLACK_2-349634.jpg?v=1664470670",
+          "altText": null,
+          "height": 1500,
+          "width": 1500,
+          "sensitive": false,
+          "__typename": "Image"
+        },
+        "__typename": "StorefrontMediaImage"
+      },
+      {
+        "mediaContentType": "IMAGE",
+        "alt": "",
+        "id": "gid://shopify/MediaImage/21197904838728",
+        "image": {
+          "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/products/4400_BLACK_1_GRAY.jpg?v=1664470670",
+          "altText": null,
+          "height": 1500,
+          "width": 1500,
+          "sensitive": false,
+          "__typename": "Image"
+        },
+        "__typename": "StorefrontMediaImage"
+      },
+      {
+        "mediaContentType": "IMAGE",
+        "alt": "",
+        "id": "gid://shopify/MediaImage/8397318389832",
+        "image": {
+          "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/products/3605_BLACK_3-749406.jpg?v=1657340377",
+          "altText": null,
+          "height": 1500,
+          "width": 1500,
+          "sensitive": false,
+          "__typename": "Image"
+        },
+        "__typename": "StorefrontMediaImage"
+      },
+      {
+        "mediaContentType": "IMAGE",
+        "alt": "",
+        "id": "gid://shopify/MediaImage/8397318422600",
+        "image": {
+          "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/products/3605_BLACK_4-807568.jpg?v=1657340377",
+          "altText": null,
+          "height": 1500,
+          "width": 1500,
+          "sensitive": false,
+          "__typename": "Image"
+        },
+        "__typename": "StorefrontMediaImage"
+      },
+      {
+        "mediaContentType": "IMAGE",
+        "alt": "",
+        "id": "gid://shopify/MediaImage/8397318455368",
+        "image": {
+          "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/products/3605_BLACK_5-920924.jpg?v=1657340377",
+          "altText": null,
+          "height": 1500,
+          "width": 1500,
+          "sensitive": false,
+          "__typename": "Image"
+        },
+        "__typename": "StorefrontMediaImage"
+      }
+    ],
+    "__typename": "StorefrontMediaContentConnection"
+  },
+  "variants": {
+    "nodes": [
+      {
+        "id": "gid://shopify/ProductVariant/29274975666248",
+        "title": "S",
+        "currentlyNotInStock": false,
+        "availableForSale": true,
+        "requiresShipping": true,
+        "inDefaultProductList": false,
+        "quantityAvailable": 414,
+        "variantImage": {
+          "id": "gid://shopify/ProductImage/16245767831624",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/products/3605_BLACK_2-349634.jpg?v=1664470670",
+            "altText": null,
+            "height": 1500,
+            "width": 1500,
+            "sensitive": false,
+            "__typename": "Image"
+          },
+          "__typename": "StorefrontVariantImage"
+        },
+        "selectedOptions": [
+          {
+            "name": "Size",
+            "value": "S",
+            "__typename": "StorefrontProductVariantSelectedOption"
+          }
+        ],
+        "originalPrice": {
+          "amount": "24.99",
+          "currencyCode": "NGN",
+          "__typename": "MoneyV2"
+        },
+        "price": {
+          "amount": "14.97",
+          "currencyCode": "NGN",
+          "__typename": "MoneyV2"
+        },
+        "__typename": "StorefrontProductVariant",
+        "bundledBy": {
+          "nodes": [],
+          "pageInfo": {
+            "hasNextPage": false,
+            "__typename": "PageInfo"
+          },
+          "__typename": "StorefrontProductVariantConnection"
+        },
+        "bundleComponents": {
+          "nodes": [],
+          "__typename": "ProductVariantBundleComponentConnection"
+        }
+      },
+      {
+        "id": "gid://shopify/ProductVariant/29274975699016",
+        "title": "M",
+        "currentlyNotInStock": false,
+        "availableForSale": false,
+        "requiresShipping": true,
+        "inDefaultProductList": false,
+        "quantityAvailable": 0,
+        "variantImage": {
+          "id": "gid://shopify/ProductImage/16245767831624",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/products/3605_BLACK_2-349634.jpg?v=1664470670",
+            "altText": null,
+            "height": 1500,
+            "width": 1500,
+            "sensitive": false,
+            "__typename": "Image"
+          },
+          "__typename": "StorefrontVariantImage"
+        },
+        "selectedOptions": [
+          {
+            "name": "Size",
+            "value": "M",
+            "__typename": "StorefrontProductVariantSelectedOption"
+          }
+        ],
+        "originalPrice": {
+          "amount": "24.99",
+          "currencyCode": "NGN",
+          "__typename": "MoneyV2"
+        },
+        "price": {
+          "amount": "14.97",
+          "currencyCode": "NGN",
+          "__typename": "MoneyV2"
+        },
+        "__typename": "StorefrontProductVariant",
+        "bundledBy": {
+          "nodes": [],
+          "pageInfo": {
+            "hasNextPage": false,
+            "__typename": "PageInfo"
+          },
+          "__typename": "StorefrontProductVariantConnection"
+        },
+        "bundleComponents": {
+          "nodes": [],
+          "__typename": "ProductVariantBundleComponentConnection"
+        }
+      },
+      {
+        "id": "gid://shopify/ProductVariant/29274975731784",
+        "title": "L",
+        "currentlyNotInStock": false,
+        "availableForSale": false,
+        "requiresShipping": true,
+        "inDefaultProductList": false,
+        "quantityAvailable": 0,
+        "variantImage": {
+          "id": "gid://shopify/ProductImage/16245767831624",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/products/3605_BLACK_2-349634.jpg?v=1664470670",
+            "altText": null,
+            "height": 1500,
+            "width": 1500,
+            "sensitive": false,
+            "__typename": "Image"
+          },
+          "__typename": "StorefrontVariantImage"
+        },
+        "selectedOptions": [
+          {
+            "name": "Size",
+            "value": "L",
+            "__typename": "StorefrontProductVariantSelectedOption"
+          }
+        ],
+        "originalPrice": {
+          "amount": "24.99",
+          "currencyCode": "NGN",
+          "__typename": "MoneyV2"
+        },
+        "price": {
+          "amount": "14.97",
+          "currencyCode": "NGN",
+          "__typename": "MoneyV2"
+        },
+        "__typename": "StorefrontProductVariant",
+        "bundledBy": {
+          "nodes": [],
+          "pageInfo": {
+            "hasNextPage": false,
+            "__typename": "PageInfo"
+          },
+          "__typename": "StorefrontProductVariantConnection"
+        },
+        "bundleComponents": {
+          "nodes": [],
+          "__typename": "ProductVariantBundleComponentConnection"
+        }
+      },
+      {
+        "id": "gid://shopify/ProductVariant/29274975764552",
+        "title": "XL",
+        "currentlyNotInStock": false,
+        "availableForSale": false,
+        "requiresShipping": true,
+        "inDefaultProductList": false,
+        "quantityAvailable": 0,
+        "variantImage": {
+          "id": "gid://shopify/ProductImage/16245767831624",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/products/3605_BLACK_2-349634.jpg?v=1664470670",
+            "altText": null,
+            "height": 1500,
+            "width": 1500,
+            "sensitive": false,
+            "__typename": "Image"
+          },
+          "__typename": "StorefrontVariantImage"
+        },
+        "selectedOptions": [
+          {
+            "name": "Size",
+            "value": "XL",
+            "__typename": "StorefrontProductVariantSelectedOption"
+          }
+        ],
+        "originalPrice": {
+          "amount": "24.99",
+          "currencyCode": "NGN",
+          "__typename": "MoneyV2"
+        },
+        "price": {
+          "amount": "14.97",
+          "currencyCode": "NGN",
+          "__typename": "MoneyV2"
+        },
+        "__typename": "StorefrontProductVariant",
+        "bundledBy": {
+          "nodes": [],
+          "pageInfo": {
+            "hasNextPage": false,
+            "__typename": "PageInfo"
+          },
+          "__typename": "StorefrontProductVariantConnection"
+        },
+        "bundleComponents": {
+          "nodes": [],
+          "__typename": "ProductVariantBundleComponentConnection"
+        }
+      },
+      {
+        "id": "gid://shopify/ProductVariant/29274975797320",
+        "title": "2XL",
+        "currentlyNotInStock": false,
+        "availableForSale": false,
+        "requiresShipping": true,
+        "inDefaultProductList": false,
+        "quantityAvailable": 0,
+        "variantImage": {
+          "id": "gid://shopify/ProductImage/16245767831624",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/products/3605_BLACK_2-349634.jpg?v=1664470670",
+            "altText": null,
+            "height": 1500,
+            "width": 1500,
+            "sensitive": false,
+            "__typename": "Image"
+          },
+          "__typename": "StorefrontVariantImage"
+        },
+        "selectedOptions": [
+          {
+            "name": "Size",
+            "value": "2XL",
+            "__typename": "StorefrontProductVariantSelectedOption"
+          }
+        ],
+        "originalPrice": {
+          "amount": "24.99",
+          "currencyCode": "NGN",
+          "__typename": "MoneyV2"
+        },
+        "price": {
+          "amount": "14.97",
+          "currencyCode": "NGN",
+          "__typename": "MoneyV2"
+        },
+        "__typename": "StorefrontProductVariant",
+        "bundledBy": {
+          "nodes": [],
+          "pageInfo": {
+            "hasNextPage": false,
+            "__typename": "PageInfo"
+          },
+          "__typename": "StorefrontProductVariantConnection"
+        },
+        "bundleComponents": {
+          "nodes": [],
+          "__typename": "ProductVariantBundleComponentConnection"
+        }
+      },
+      {
+        "id": "gid://shopify/ProductVariant/39975120109640",
+        "title": "3XL",
+        "currentlyNotInStock": false,
+        "availableForSale": false,
+        "requiresShipping": true,
+        "inDefaultProductList": false,
+        "quantityAvailable": 0,
+        "variantImage": {
+          "id": "gid://shopify/ProductImage/16245767831624",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/0220/4008/4552/products/3605_BLACK_2-349634.jpg?v=1664470670",
+            "altText": null,
+            "height": 1500,
+            "width": 1500,
+            "sensitive": false,
+            "__typename": "Image"
+          },
+          "__typename": "StorefrontVariantImage"
+        },
+        "selectedOptions": [
+          {
+            "name": "Size",
+            "value": "3XL",
+            "__typename": "StorefrontProductVariantSelectedOption"
+          }
+        ],
+        "originalPrice": {
+          "amount": "24.99",
+          "currencyCode": "NGN",
+          "__typename": "MoneyV2"
+        },
+        "price": {
+          "amount": "14.97",
+          "currencyCode": "NGN",
+          "__typename": "MoneyV2"
+        },
+        "__typename": "StorefrontProductVariant",
+        "bundledBy": {
+          "nodes": [],
+          "pageInfo": {
+            "hasNextPage": false,
+            "__typename": "PageInfo"
+          },
+          "__typename": "StorefrontProductVariantConnection"
+        },
+        "bundleComponents": {
+          "nodes": [],
+          "__typename": "ProductVariantBundleComponentConnection"
+        }
+      }
+    ],
+    "pageInfo": {
+      "hasNextPage": false,
+      "__typename": "PageInfo"
+    },
+    "__typename": "StorefrontProductVariantConnection"
+  },
+  "options": [
+    {
+      "name": "Size",
+      "values": ["S", "M", "L", "XL", "2XL", "3XL"],
+      "__typename": "StorefrontProductVariantOption"
+    }
+  ],
+  "reviewAnalytics": {
+    "totalReviews": 127,
+    "averageRating": 4.5621,
+    "totals": {
+      "fiveStars": 97,
+      "fourStars": 11,
+      "threeStars": 10,
+      "twoStars": 4,
+      "oneStar": 5,
+      "__typename": "ReviewAnalyticsRatingTotals"
+    },
+    "__typename": "ReviewAnalytics"
+  },
+  "reviews": {
+    "nodes": [
+      {
+        "id": "112669295",
+        "title": "Black Crew Tee",
+        "body": "Great look and can style it in a variety of ways. Snug where it should be and relaxed where it needs to be!",
+        "rating": 5,
+        "submittedAt": "2024-01-17T02:37:44Z",
+        "__typename": "ProductReview",
+        "reviewer": {
+          "id": "109026214",
+          "displayName": "Michael",
+          "__typename": "Reviewer"
+        },
+        "publishedVersion": {
+          "id": "137601646",
+          "merchantReply": null,
+          "merchantReplySubmittedAt": null,
+          "createdAt": "2024-01-17T02:37:48Z",
+          "__typename": "ProductReviewVersion"
+        },
+        "helpfulnessCount": 0,
+        "markedAsHelpfulByMe": false,
+        "reportedByMe": false,
+        "product": null
+      },
+      {
+        "id": "65650840",
+        "title": null,
+        "body": "Perfect fit! Loved the feel and fit of these and will definitely be ordering more! Great fit up top with some play down low and good length for good comfortable fit!",
+        "rating": 5,
+        "submittedAt": "2023-12-11T16:24:44Z",
+        "__typename": "ProductReview",
+        "reviewer": {
+          "id": "397269",
+          "displayName": "Matthew",
+          "__typename": "Reviewer"
+        },
+        "publishedVersion": {
+          "id": "89356525",
+          "merchantReply": null,
+          "merchantReplySubmittedAt": null,
+          "createdAt": "2023-12-11T16:24:46Z",
+          "__typename": "ProductReviewVersion"
+        },
+        "helpfulnessCount": 1,
+        "markedAsHelpfulByMe": false,
+        "reportedByMe": false,
+        "product": {
+          "id": "6496619842",
+          "variantTitle": "2XL",
+          "__typename": "ReviewedProduct"
+        }
+      },
+      {
+        "id": "105606683",
+        "title": "As Advertised!",
+        "body": "Great fit up top as advertised, perfect low around midsection and great length. Exactly what I wanted and needed for my frame.",
+        "rating": 5,
+        "submittedAt": "2023-12-26T16:49:22Z",
+        "__typename": "ProductReview",
+        "reviewer": null,
+        "publishedVersion": {
+          "id": "129845949",
+          "merchantReply": null,
+          "merchantReplySubmittedAt": null,
+          "createdAt": "2023-12-26T16:49:26Z",
+          "__typename": "ProductReviewVersion"
+        },
+        "helpfulnessCount": 0,
+        "markedAsHelpfulByMe": false,
+        "reportedByMe": false,
+        "product": null
+      },
+      {
+        "id": "105706964",
+        "title": "Great fit",
+        "body": "Great fit compared to most t shirts being baggy on arms when size needed to fit waist.",
+        "rating": 5,
+        "submittedAt": "2023-12-27T00:38:43Z",
+        "__typename": "ProductReview",
+        "reviewer": null,
+        "publishedVersion": {
+          "id": "129950360",
+          "merchantReply": null,
+          "merchantReplySubmittedAt": null,
+          "createdAt": "2023-12-27T00:38:47Z",
+          "__typename": "ProductReviewVersion"
+        },
+        "helpfulnessCount": 0,
+        "markedAsHelpfulByMe": false,
+        "reportedByMe": false,
+        "product": null
+      }
+    ],
+    "__typename": "ProductReviewConnection"
+  },
+  "__typename": "StorefrontProduct"
+}
