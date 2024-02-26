@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { BsHeart, BsHeartFill } from "react-icons/bs";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { storeFrontProductData } from "@/lib/data";
 import { ProductPrice } from "@/modules/product/product-price";
 import { Text } from "@/ui/text";
@@ -57,7 +57,7 @@ export default function StoreFrontProduct() {
                 className="text-md rounded-full"
                 onClick={() => setLiked((liked) => !liked)}
               >
-                {liked ? <BsHeartFill /> : <BsHeart />}
+                {liked ? <FaHeart /> : <FaRegHeart />}
               </Button>
             </div>
             <ProductPrice

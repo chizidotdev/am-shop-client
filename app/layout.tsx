@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/modules/common/theme-provider";
 import { ThemeToggle } from "@/modules/common/theme-toggle";
 import { cn } from "@/lib/utils";
+import { MainNav } from "@/common/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,13 +20,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn(inter.className)}>
+      <body className={cn(inter.className, "relative")}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
+          <MainNav />
           <div className="relative max-w-5xl mx-auto p-5">{children}</div>
           <ThemeToggle />
         </ThemeProvider>

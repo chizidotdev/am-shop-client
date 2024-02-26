@@ -4,8 +4,6 @@ import { ProductCard } from "@/modules/product/product-card";
 import { Button } from "@/ui/button";
 
 export default function Home() {
-  console.log(">>>>", shopProductSearchData);
-
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       <Button>Click me</Button>

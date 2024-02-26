@@ -1,4 +1,5 @@
 import { Button, buttonVariants } from "@/ui/button";
+import { cn } from "@/lib/utils";
 import React from "react";
 
 export const QuantitySelector = () => {
@@ -17,11 +18,13 @@ export const QuantitySelector = () => {
           -
         </Button>
         <span
-          className={buttonVariants({
-            size: "icon",
-            variant: "outline",
-            className: "pointer-events-none h-7",
-          })}
+          className={cn(
+            buttonVariants({
+              size: "icon",
+              variant: "outline",
+            }),
+            "pointer-events-none h-7",
+          )}
         >
           {quantity}
         </span>
