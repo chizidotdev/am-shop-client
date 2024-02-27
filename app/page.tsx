@@ -32,7 +32,7 @@ export default function Home() {
           </div>
 
           <div className="flex items-center gap-1">
-            <Button variant="secondary">Follow</Button>
+            <Button>Follow</Button>
           </div>
         </div>
 

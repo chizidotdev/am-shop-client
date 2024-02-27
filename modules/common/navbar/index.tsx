@@ -27,24 +27,27 @@ export function MainNav() {
   return (
     <nav
       className={cn(
-        "sticky top-0 bg-background z-10 max-w-7xl mx-auto p-5 py-3",
-        "flex items-center justify-between space-x-4 lg:space-x-6 transition-all",
+        "sticky top-0 bg-background z-10 p-5 py-3 transition-all",
         hasScrolled && "border-b shadow-sm",
       )}
     >
-      <AppLogo />
+      <div className="flex items-center justify-between gap-5 max-w-7xl mx-auto">
+        <AppLogo />
 
-      <StorefrontSearch />
+        <StorefrontSearch className="hidden sm:flex flex-1 max-w-lg mx-auto w-full" />
 
-      <div className="flex items-center gap-1">
-        <Button variant="ghost" className="rounded-full h-10 w-10 p-2">
-          <FaRegHeart size={18} />
-        </Button>
-        <Button variant="ghost" className="rounded-full h-10 w-10 p-2">
-          <MdOutlineShoppingBag size={20} />
-        </Button>
-        <Button variant="outline">Sign In</Button>
+        <div className="flex items-center gap-1">
+          <Button variant="ghost" className="rounded-full h-10 w-10 p-2">
+            <FaRegHeart size={18} />
+          </Button>
+          <Button variant="ghost" className="rounded-full h-10 w-10 p-2">
+            <MdOutlineShoppingBag size={20} />
+          </Button>
+          <Button variant="outline">Sign In</Button>
+        </div>
       </div>
+
+      <StorefrontSearch className="sm:hidden w-full mt-5" />
       {/*links.map(({ href, label }) => {
         const isActive = pathname === href;
 
@@ -65,9 +68,9 @@ export function MainNav() {
   );
 }
 
-const links = [
-  { href: "/dashboard", label: "Overview" },
-  { href: "/products", label: "Products" },
-  // { href: '/dashboard', label: 'Customers' },
-  // { href: '/dashboard', label: 'Settings' },
-];
+// const links = [
+//   { href: "/dashboard", label: "Overview" },
+//   { href: "/products", label: "Products" },
+//   // { href: '/dashboard', label: 'Customers' },
+//   // { href: '/dashboard', label: 'Settings' },
+// ];
