@@ -4,7 +4,6 @@ import "./globals.css";
 import { ThemeProvider } from "@/modules/common/theme-provider";
 import { ThemeToggle } from "@/modules/common/theme-toggle";
 import { cn } from "@/lib/utils";
-import { MainNav } from "@/common/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,8 +26,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <MainNav />
-          <div className="relative max-w-5xl mx-auto p-5">{children}</div>
+          <div>{children}</div>
           <ThemeToggle />
         </ThemeProvider>
       </body>
