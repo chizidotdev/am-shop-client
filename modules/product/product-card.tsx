@@ -3,7 +3,7 @@ import React from "react";
 import { Text } from "@/ui/text";
 import { cn } from "@/lib/utils";
 import { BiSolidPurchaseTag } from "react-icons/bi";
-import { BsHeart, BsHeartFill } from "react-icons/bs";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { ProductPrice } from "./product-price";
 
 export const ProductCard = ({ product }: { product: DiscoveryProduct }) => {
@@ -47,7 +47,7 @@ export const ProductCard = ({ product }: { product: DiscoveryProduct }) => {
           )}
           onClick={() => setLiked((liked) => !liked)}
         >
-          {liked ? <BsHeartFill /> : <BsHeart />}
+          {liked ? <FaHeart /> : <FaRegHeart />}
         </button>
       </div>
 

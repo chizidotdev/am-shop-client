@@ -1,0 +1,361 @@
+{
+  "id": "165053",
+  "shopifyId": "6186270804",
+  "myshopifyDomain": "princesspollydev.myshopify.com",
+  "name": "Princess Polly USA",
+  "adjustProductImageAspectRatio": false,
+  "followedByMe": null,
+  "inboxEnabled": false,
+  "shopWebDisabled": false,
+  "inboxVisible": false,
+  "nativeProductPagesEnabled": true,
+  "shopNetwork": true,
+  "storeEligible": true,
+  "websiteUrl": "https://us.princesspolly.com?utm_source=shop_app",
+  "defaultHandle": "hc0xpj8297",
+  "shareUrl": "https://shop.app/m/hc0xpj8297?utm_source=shop_app",
+  "showBrandedHeaderV2": true,
+  "productReviewAnalytics": {
+    "totalProductReviews": 164085,
+    "averageRating": 4.3796,
+    "__typename": "ShopProductReviewAnalytics"
+  },
+  "shippingInfo": {
+    "country": "Nigeria",
+    "shipsToCountry": true,
+    "__typename": "ShippingInfo"
+  },
+  "policies": {
+    "shippingPolicy": {
+      "embedUrl": "https://checkout.shopify.com/6186270804/policies/10740170836.html?locale=en",
+      "__typename": "Policy"
+    },
+    "returnPolicy": {
+      "embedUrl": "https://checkout.shopify.com/6186270804/policies/10740072532.html?locale=en",
+      "__typename": "Policy"
+    },
+    "privacyPolicy": {
+      "embedUrl": "https://checkout.shopify.com/6186270804/policies/10740105300.html?locale=en",
+      "__typename": "Policy"
+    },
+    "__typename": "Policies"
+  },
+  "visualTheme": {
+    "id": "visual-theme-165053",
+    "heroImage": null,
+    "logoImage": {
+      "url": "https://cdn.shopify.com/s/files/1/0061/8627/0804/files/logo.webp?v=1689698180",
+      "altText": null,
+      "height": null,
+      "width": null,
+      "sensitive": false,
+      "__typename": "Image"
+    },
+    "description": "Princess Polly is Australia's best online fashion boutique. Shop women's clothing today & receive express worldwide shipping with easy 30 day returns.",
+    "brandSettings": {
+      "id": "brand-settings-165053",
+      "colors": {
+        "id": "color-165053",
+        "primary": "#FFFFFFff",
+        "secondary": "#000000ff",
+        "secondaryText": "#ffffffff",
+        "statusBarStyle": "light-content",
+        "__typename": "ColorTheme"
+      },
+      "logos": {
+        "id": "logos-165053",
+        "logoImage": {
+          "url": "https://cdn.shopify.com/shop-assets/shopify_brokers/princesspollydev.myshopify.com/1689699074/PrincessPollyWhite1.png?format=webp",
+          "altText": null,
+          "height": null,
+          "width": null,
+          "sensitive": false,
+          "__typename": "Image"
+        },
+        "__typename": "LogoTheme"
+      },
+      "headerTheme": {
+        "id": "header-theme-165053",
+        "coverImage": {
+          "url": "https://cdn.shopify.com/shop-assets/shopify_brokers/princesspollydev.myshopify.com/1687991476/312.jpeg",
+          "altText": null,
+          "height": null,
+          "width": null,
+          "sensitive": false,
+          "__typename": "Image"
+        },
+        "slogan": null,
+        "thumbnailImage": null,
+        "videoUrl": null,
+        "startingScrimColor": "#00000024",
+        "endingScrimColor": "#000000bf",
+        "__typename": "HeaderTheme"
+      },
+      "__typename": "BrandSettings"
+    },
+    "__typename": "VisualTheme"
+  },
+  "storeSections": [
+    {
+      "id": "gid://shopapp/ShopStore/Broker/165053/announcements",
+      "index": 0,
+      "gid": {
+        "domain": "ShopStore",
+        "modelId": "165053",
+        "__typename": "ShopGID"
+      },
+      "title": null,
+      "action": null,
+      "__typename": "AnnouncementsSection",
+      "announcements": [],
+      "bgColor": null,
+      "titleColor": null
+    },
+    {
+      "__typename": "MinisEntryPointsV2Section"
+    },
+    {
+      "__typename": "MinisEntryPointsV2Section"
+    },
+    {
+      "__typename": "MinisEntryPointsV2Section"
+    },
+    {
+      "__typename": "MinisEntryPointsV2Section"
+    },
+    {
+      "__typename": "MinisEntryPointsV2Section"
+    },
+    {
+      "__typename": "MinisEntryPointsV2Section"
+    },
+    {
+      "__typename": "MinisWidgetsSection"
+    }
+  ],
+  "shopCashOffer": null,
+  "productReviews": {
+    "nodes": [
+      {
+        "id": "120910433",
+        "syndicated": false,
+        "reviewer": {
+          "id": "8216525",
+          "displayName": "Florencia",
+          "__typename": "Reviewer"
+        },
+        "title": null,
+        "body": "definitely thought it wasn’t going to fit my chest because i am a bit more top heavy for my height (i’m 5ft) and although i was proven SO WRONG i wouldn’t wear this out where there’s going to be a lot of movement but definitely a dinner or a drink out with the girls :) i just fear im going to pop a girl out LOL",
+        "rating": 5,
+        "product": {
+          "id": "7213115139",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/0061/8627/0804/files/0-modelinfo-alex-us4_fb0b755c-1b74-44f8-924e-1da971fb0281.jpg?v=1686783761",
+            "altText": null,
+            "height": 1821,
+            "width": 1345,
+            "sensitive": false,
+            "__typename": "Image"
+          },
+          "title": "Makena Strapless Bodysuit White Petite",
+          "variantTitle": "US 12 / White",
+          "__typename": "ReviewedProduct"
+        },
+        "submittedAt": "2024-02-25T18:59:58Z",
+        "helpfulnessCount": 0,
+        "markedAsHelpfulByMe": false,
+        "reportedByMe": false,
+        "publishedVersion": {
+          "id": "146338327",
+          "merchantReply": null,
+          "createdAt": "2024-02-25T18:59:58Z",
+          "__typename": "ProductReviewVersion"
+        },
+        "discoveryProduct": {
+          "id": "6786063073364",
+          "url": "https://us.princesspolly.com/products/makena-strapless-bodysuit-white-eco-petite-1?utm_source=shop_app&list_generator=product_review",
+          "title": "Makena Strapless Bodysuit White Petite",
+          "images": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0061/8627/0804/files/0-modelinfo-alex-us4_fb0b755c-1b74-44f8-924e-1da971fb0281.jpg?v=1686783761",
+              "altText": "Princes Polly Sleeveless  Makena Strapless Bodysuit White Petite",
+              "height": 1821,
+              "width": 1345,
+              "sensitive": false,
+              "__typename": "Image"
+            }
+          ],
+          "__typename": "DiscoveryProduct"
+        },
+        "__typename": "ProductReview"
+      },
+      {
+        "id": "120909857",
+        "syndicated": false,
+        "reviewer": {
+          "id": "8216525",
+          "displayName": "Florencia",
+          "__typename": "Reviewer"
+        },
+        "title": null,
+        "body": "i honestly love these shorts so much and look good on me! i wasn’t too sure because im 5ft exactly and have a big butt and thighs and the model looks nothing like me but it fit perfectly and looked so good! It’s my first pair of long shorts like this too so i’m glad it had a positive outcome :) (it also has buttons to make it low rise and tight and stuff which is amazing for me)",
+        "rating": 5,
+        "product": {
+          "id": "7213115142",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/0061/8627/0804/files/0-modelinfo-nat-us2_b220ab30-5418-48eb-a7fb-702dffca2e45.jpg?v=1699926400",
+            "altText": null,
+            "height": 1821,
+            "width": 1345,
+            "sensitive": false,
+            "__typename": "Image"
+          },
+          "title": "Mika Carpenter Denim Shorts Mid Wash",
+          "variantTitle": "US 12 / Mid Wash",
+          "__typename": "ReviewedProduct"
+        },
+        "submittedAt": "2024-02-25T18:54:14Z",
+        "helpfulnessCount": 0,
+        "markedAsHelpfulByMe": false,
+        "reportedByMe": false,
+        "publishedVersion": {
+          "id": "146337737",
+          "merchantReply": null,
+          "createdAt": "2024-02-25T18:54:14Z",
+          "__typename": "ProductReviewVersion"
+        },
+        "discoveryProduct": {
+          "id": "6836492632148",
+          "url": "https://us.princesspolly.com/products/mika-carpenter-denim-shorts-mid-wash?utm_source=shop_app&list_generator=product_review",
+          "title": "Mika Carpenter Denim Shorts Mid Wash",
+          "images": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0061/8627/0804/files/0-modelinfo-nat-us2_b220ab30-5418-48eb-a7fb-702dffca2e45.jpg?v=1699580507",
+              "altText": "Mika Carpenter Denim Shorts Mid Wash Princess Polly High Waisted Shorts ",
+              "height": 1821,
+              "width": 1345,
+              "sensitive": false,
+              "__typename": "Image"
+            }
+          ],
+          "__typename": "DiscoveryProduct"
+        },
+        "__typename": "ProductReview"
+      },
+      {
+        "id": "121118473",
+        "syndicated": false,
+        "reviewer": {
+          "id": "125235702",
+          "displayName": "Britt",
+          "__typename": "Reviewer"
+        },
+        "title": null,
+        "body": "the skirt is really cute. It’s a good length but it’s poor quality. I literally put the button through the hole and it popped right off the skirt. Also since it’s a skort, you can kinda see the shorts under along with pockets.",
+        "rating": 1,
+        "product": {
+          "id": "7270651754",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/0061/8627/0804/files/0-modelinfo-natalya-us2_b57e54c2-87d4-4c2d-b9de-fc32802c68c3.jpg?v=1708573148",
+            "altText": null,
+            "height": 1821,
+            "width": 1345,
+            "sensitive": false,
+            "__typename": "Image"
+          },
+          "title": "Returna Skort White",
+          "variantTitle": "US 4 / White",
+          "__typename": "ReviewedProduct"
+        },
+        "submittedAt": "2024-02-27T01:46:11Z",
+        "helpfulnessCount": 0,
+        "markedAsHelpfulByMe": false,
+        "reportedByMe": false,
+        "publishedVersion": {
+          "id": "146559225",
+          "merchantReply": null,
+          "createdAt": "2024-02-27T01:46:11Z",
+          "__typename": "ProductReviewVersion"
+        },
+        "discoveryProduct": {
+          "id": "6853465342036",
+          "url": "https://us.princesspolly.com/products/returna-skort-white?utm_source=shop_app&list_generator=product_review",
+          "title": "Returna Skort White",
+          "images": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0061/8627/0804/files/0-modelinfo-natalya-us2_b57e54c2-87d4-4c2d-b9de-fc32802c68c3.jpg?v=1708573148",
+              "altText": "White Mini skort Slim fit, four pocket design, belt loops at waist, button & zip fastening",
+              "height": 1821,
+              "width": 1345,
+              "sensitive": false,
+              "__typename": "Image"
+            }
+          ],
+          "__typename": "DiscoveryProduct"
+        },
+        "__typename": "ProductReview"
+      },
+      {
+        "id": "120675116",
+        "syndicated": false,
+        "reviewer": {
+          "id": "134275947",
+          "displayName": "Zoe",
+          "__typename": "Reviewer"
+        },
+        "title": null,
+        "body": "I have never loved a dress more in my entire life. It fits me PERFECTLY and makes me look so snatched and awesome. When I tried it on I couldn’t take it off for an hour it made me feel awesome I LOVE it",
+        "rating": 5,
+        "product": {
+          "id": "7094505685",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/0061/8627/0804/products/NOVELLA-MINI-DRESS-RED.jpg?v=1573448489",
+            "altText": null,
+            "height": 1820,
+            "width": 1344,
+            "sensitive": false,
+            "__typename": "Image"
+          },
+          "title": "Novella Mini Dress Red",
+          "variantTitle": "US 4 / Red",
+          "__typename": "ReviewedProduct"
+        },
+        "submittedAt": "2024-02-23T23:35:20Z",
+        "helpfulnessCount": 0,
+        "markedAsHelpfulByMe": false,
+        "reportedByMe": false,
+        "publishedVersion": {
+          "id": "146094644",
+          "merchantReply": null,
+          "createdAt": "2024-02-23T23:35:20Z",
+          "__typename": "ProductReviewVersion"
+        },
+        "discoveryProduct": {
+          "id": "3512306466900",
+          "url": "https://us.princesspolly.com/products/novella-mini-dress-red?utm_source=shop_app&list_generator=product_review",
+          "title": "Novella Mini Dress Red",
+          "images": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0061/8627/0804/products/NOVELLA-MINI-DRESS-RED.jpg?v=1573448489",
+              "altText": "Princess Polly   Novella Mini Dress Red",
+              "height": 1820,
+              "width": 1344,
+              "sensitive": false,
+              "__typename": "Image"
+            }
+          ],
+          "__typename": "DiscoveryProduct"
+        },
+        "__typename": "ProductReview"
+      }
+    ],
+    "totalCount": 164085,
+    "pageInfo": {
+      "hasNextPage": true,
+      "endCursor": "NA",
+      "__typename": "PageInfo"
+    },
+    "__typename": "ProductReviewConnection"
+  },
+  "__typename": "Shop"
+}

@@ -37,13 +37,13 @@ export function MainNav() {
       <StorefrontSearch />
 
       <div className="flex items-center gap-1">
-        <Button variant="ghost" className="rounded-full h-11 w-11 p-3">
-          <FaRegHeart size={24} />
+        <Button variant="ghost" className="rounded-full h-10 w-10 p-2">
+          <FaRegHeart size={18} />
         </Button>
-        <Button variant="ghost" className="rounded-full h-11 w-11 p-3">
-          <MdOutlineShoppingBag size={25} />
+        <Button variant="ghost" className="rounded-full h-10 w-10 p-2">
+          <MdOutlineShoppingBag size={20} />
         </Button>
-        <Button variant="secondary">Sign In</Button>
+        <Button variant="outline">Sign In</Button>
       </div>
       {/*links.map(({ href, label }) => {
         const isActive = pathname === href;

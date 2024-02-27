@@ -33,7 +33,7 @@ interface DiscoveryProduct {
   title: string;
   images: Image[];
   offers: any[];
-  shopCashOffer: any;
+  shopCashOffer: ShopCashOffer | null;
   defaultVariantId: string;
   inDefaultProductList: boolean;
   shop: Shop;
