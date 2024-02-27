@@ -17,7 +17,7 @@ export const ProductCard = ({ product }: { product: DiscoveryProduct }) => {
     : 0;
 
   return (
-    <div className="bg-card text-card-foreground ">
+    <div className="text-card-foreground ">
       <div className="relative aspect-square">
         <Image
           fill
