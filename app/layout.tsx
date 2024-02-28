@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/modules/common/theme-provider";
 import { ThemeToggle } from "@/modules/common/theme-toggle";
 import { cn } from "@/lib/utils";
 
-const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn(inter.className, "relative")}>
+      <body className={cn(montserrat.className, "relative")}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

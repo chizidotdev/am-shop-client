@@ -9,6 +9,7 @@ import Image from "next/image";
 import { Button } from "@/ui/button";
 import { ProductOptions } from "@/modules/product/product-options";
 import { QuantitySelector } from "@/modules/product/quantity-selector";
+import { OpayLink } from "@/common/opay-link";
 
 export default function StoreFrontProduct() {
   const [liked, setLiked] = React.useState(false);
@@ -76,14 +77,7 @@ export default function StoreFrontProduct() {
             <Button variant="secondary">Buy now</Button>
             <Text asLabel className="text-xs text-center">
               Checkout powered by&nbsp;
-              <a
-                href="https://www.opayweb.com/"
-                target="_blank"
-                rel="noreferrer"
-                className="text-primary"
-              >
-                Opay
-              </a>
+              <OpayLink />
             </Text>
           </div>
 
