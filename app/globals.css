@@ -5,7 +5,7 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --dashboard-background: 220 14% 97%;
+    --dashboard-background: 221 8% 98%;
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -54,9 +54,6 @@
 @layer base {
   * {
     @apply border-border;
-  }
-  html {
-    font-size: 14px;
   }
   body {
     @apply bg-background text-foreground;

@@ -10,7 +10,7 @@ import { GoChevronDown } from "react-icons/go";
 
 export const OptionsMenu = () => {
   return (
-    <div className="flex items-center gap-1">
+    <div className="flex items-center gap-2">
       {/* <Button variant="outline">Import</Button> */}
       <DropdownMenu>
         <DropdownMenuTrigger>

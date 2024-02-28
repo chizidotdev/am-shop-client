@@ -90,6 +90,5 @@ export function DashboardNav() {
 const links = [
   { href: "/dashboard", label: "Dashboard" },
   { href: "/dashboard/products", label: "Products" },
-  { href: "/dashboard/orders", label: "Orders" },
   { href: "/dashboard/settings", label: "Settings" },
 ];

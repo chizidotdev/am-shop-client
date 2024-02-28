@@ -43,11 +43,11 @@ export const SetupGuide = () => {
                 </Text>
                 <div className="flex gap-3 mt-5">
                   <Link href={option.action.link}>
-                    <Button>Launch Shop</Button>
+                    <Button>{option.action.text}</Button>
                   </Link>
                   {option.secondaryAction && (
                     <Link href={option.secondaryAction.link}>
-                      <Button>Launch Shop</Button>
+                      <Button variant="outline">{option.secondaryAction.text}</Button>
                     </Link>
                   )}
                 </div>
