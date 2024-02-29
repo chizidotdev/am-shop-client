@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import { useState } from "react";
 import { shopData, shopProductSearchData } from "@/lib/data";
 import Image from "next/image";
 import { ProductCard } from "@/modules/product/product-card";
@@ -11,7 +11,7 @@ import { BiSearch } from "react-icons/bi";
 
 export default function Home() {
   const { name, visualTheme } = shopData;
-  const [selected, setSelected] = React.useState("All");
+  const [selected, setSelected] = useState("All");
 
   return (
     <main className="flex min-h-screen flex-col gap-10 mb-10">

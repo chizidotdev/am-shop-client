@@ -7,7 +7,7 @@ import { MdOutlineShoppingBag } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa";
 import { Button } from "@/ui/button";
 import { StorefrontSearch } from "./storefront-search";
-import { Login } from "@/modules/auth/login";
+import { AuthMenu } from "@/modules/auth/login";
 
 export function MainNav() {
   const [hasScrolled, setHasScrolled] = React.useState(false);
@@ -44,7 +44,7 @@ export function MainNav() {
           <Button variant="ghost" className="rounded-full h-10 w-10 p-2">
             <MdOutlineShoppingBag size={20} />
           </Button>
-          <Login />
+          <AuthMenu />
         </div>
       </div>
 
