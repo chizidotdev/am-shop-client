@@ -1,13 +1,22 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { Suspense, useEffect } from "react";
 import { Alert, AlertDescription } from "@/ui/alert";
 import { FiCheck } from "react-icons/fi";
 import { useSearchParams } from "next/navigation";
 import { AppLogo } from "@/common/app-logo";
 import { AlertTriangleIcon } from "lucide-react";
 import { Button } from "@/ui/button";
+import { FaCircleNotch } from "react-icons/fa";
 
 export default function Page() {
+  return (
+    <Suspense fallback={<FaCircleNotch className="animate-spin" />}>
+      <Callback />
+    </Suspense>
+  );
+}
+
+function Callback() {
   const searchParams = useSearchParams();
 
   useEffect(() => {
@@ -20,7 +29,8 @@ export default function Page() {
     <Alert variant="success">
       <FiCheck className="h-4 w-4" />
       <AlertDescription>
-        You have successfully logged in. You'll be redirected to the dashboard in a few seconds.
+        You have successfully logged in. You&apos;ll be redirected to the dashboard in a few
+        seconds.
       </AlertDescription>
     </Alert>
   );
