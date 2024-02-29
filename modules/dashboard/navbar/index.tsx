@@ -8,13 +8,15 @@ import { FaRegHeart } from "react-icons/fa";
 import { Button } from "@/ui/button";
 import { ScrollArea, ScrollBar } from "@/ui/scroll-area";
 import { DashboardSearch } from "./dashboard-search";
-import { usePathname } from "next/navigation";
+import { redirect, usePathname } from "next/navigation";
 import Link from "next/link";
 import { UserMenu } from "@/modules/auth/user-menu";
+import { useSession } from "@/modules/auth/session-context";
 
 export function DashboardNav() {
   const [hasScrolled, setHasScrolled] = React.useState(false);
   const pathname = usePathname();
+  const { status } = useSession();
 
   React.useEffect(() => {
     const setScrollHandler = () => {
@@ -28,6 +30,10 @@ export function DashboardNav() {
       document.removeEventListener("scroll", setScrollHandler);
     };
   }, []);
+
+  if (status === "unauthenticated") {
+    redirect("/");
+  }
 
   return (
     <nav className={cn("sticky top-0 z-10 transition-all", hasScrolled && "border-b shadow-sm")}>

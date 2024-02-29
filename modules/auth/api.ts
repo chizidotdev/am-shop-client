@@ -1,18 +1,19 @@
-import axios from "axios";
 import { BASE_REST_URL } from "@/lib/constants";
 import { useEffect, useState } from "react";
 import { useSession } from "./session-context";
+import { api } from "@/lib/axios";
 
-export const getUser = async (): Promise<APIResponse<User> | undefined> => {
-  const response = await axios.get(`${BASE_REST_URL}/user`, {
+export const getUser = async <T = APIResponse<User>>(): Promise<T> => {
+  const response = await api.get<T>(`${BASE_REST_URL}/user`, {
     withCredentials: true,
   });
 
+  console.log(response);
   return response.data;
 };
 
-export const signOut = async (): Promise<APIResponse<string>> => {
-  const response = await axios.post(`${BASE_REST_URL}/logout`);
+export const signOut = async <T = APIResponse<null>>(): Promise<T> => {
+  const response = await api.post<T>(`${BASE_REST_URL}/logout`);
   return response.data;
 };
 
