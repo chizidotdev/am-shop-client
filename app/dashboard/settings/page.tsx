@@ -1,8 +1,9 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/ui/card";
 import { Text } from "@/ui/text";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/ui/tabs";
-import { ShopSettings } from "@/modules/dashboard/settings/shop-settings";
+import { StoreSettings } from "@/modules/dashboard/settings/store-settings";
 import { AccountSettings } from "@/modules/dashboard/settings/account-settings";
+import { Suspense } from "react";
 
 export default function DashboardSettings() {
   return (
@@ -27,7 +28,7 @@ export default function DashboardSettings() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <ShopSettings />
+              <StoreSettings />
             </CardContent>
           </Card>
         </TabsContent>

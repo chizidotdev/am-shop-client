@@ -10,3 +10,13 @@ interface User {
   createdAt: string;
   updatedAt: string;
 }
+
+interface Store {
+  id: string;
+  name: string;
+  description: string;
+  image: string;
+  userId: string;
+  createdAt: string;
+  updatedAt: string;
+}

@@ -13,7 +13,7 @@ export const SetupGuide = () => {
     <Card className="max-w-2xl">
       <CardHeader>
         <Text variant="h3">Setup Guide</Text>
-        <Text>Follow these steps to get started with your new shop.</Text>
+        <Text>Follow these steps to get started with your new store.</Text>
       </CardHeader>
       <CardContent className="border-t px-0 pb-0">
         <Accordion type="single" collapsible defaultValue="item-2">
@@ -69,18 +69,18 @@ const setupOptions: {
   secondaryAction: Action | null;
 }[] = [
   {
+    title: "Customize your store",
+    description: "Add a logo, name, description, and social media links to your store.",
+    learnMoreLink: "https://www.example.com",
+    action: { link: "/dashboard/settings", text: "Customize" },
+    secondaryAction: null,
+  },
+  {
     title: "Add your first product",
     description: "Write a description, set a price, and upload a photo for your first product.",
     learnMoreLink: "https://www.example.com",
     action: { link: "/add-product", text: "Add Product" },
     secondaryAction: { link: "/import-products", text: "Import Products" },
-  },
-  {
-    title: "Customize your shop",
-    description: "Add a logo, name, description, and social media links to your shop.",
-    learnMoreLink: "https://www.example.com",
-    action: { link: "/customize", text: "Customize" },
-    secondaryAction: null,
   },
   {
     title: "Set up payments",
@@ -90,10 +90,10 @@ const setupOptions: {
     secondaryAction: null,
   },
   {
-    title: "Launch your shop",
-    description: "Share your shop with the world and start selling.",
+    title: "Launch your store",
+    description: "Share your store with the world and start selling.",
     learnMoreLink: "https://www.example.com",
-    action: { link: "/launch-shop", text: "Launch Shop" },
+    action: { link: "/launch-store", text: "Launch store" },
     secondaryAction: null,
   },
 ];
