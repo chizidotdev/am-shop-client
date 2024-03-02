@@ -75,7 +75,7 @@ export const StoreForm = ({ store }: { store: Store | null }) => {
 const formSchema = z.object({
   name: z
     .string()
-    .min(3, { message: "Shop name must be at least 3 characters long" })
-    .max(50, { message: "Shop name too long" }),
+    .min(3, { message: "Store name must be at least 3 characters long" })
+    .max(50, { message: "Store name too long" }),
   description: z.string(),
 });

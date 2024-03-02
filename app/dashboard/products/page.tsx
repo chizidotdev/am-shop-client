@@ -1,4 +1,5 @@
 "use client";
+import { ComingSoonBadge } from "@/common/coming-soon-badge";
 import { OptionsMenu } from "@/modules/dashboard/products/options-menu";
 import { Button } from "@/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/ui/card";
@@ -35,7 +36,10 @@ export default function DashboardProducts() {
 
             <div className="flex gap-3 mt-5">
               <Button>Add Product</Button>
-              <Button variant="secondary">Import</Button>
+              <Button variant="secondary" disabled>
+                Import &nbsp;
+                <ComingSoonBadge />
+              </Button>
             </div>
           </div>
         </CardContent>

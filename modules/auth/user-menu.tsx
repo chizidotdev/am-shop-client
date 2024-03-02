@@ -48,7 +48,7 @@ export function UserMenu() {
             <DropdownMenuSubTrigger>Dashboard</DropdownMenuSubTrigger>
             <DropdownMenuPortal>
               <DropdownMenuSubContent>
-                <DropdownMenuItem onClick={() => push("/dashboard")}>Shop</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => push("/dashboard")}>Store</DropdownMenuItem>
                 <DropdownMenuItem onClick={() => push("/dashboard/products")}>
                   Product
                 </DropdownMenuItem>

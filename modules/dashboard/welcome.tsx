@@ -1,13 +1,17 @@
 "use client";
 import React from "react";
 import { Text } from "@/ui/text";
+import { useSession } from "../auth/session-context";
 
 export const Welcome = () => {
+  const { data } = useSession();
   const greeting = getGreeting();
 
   return (
     <div>
-      <Text variant="h1">{greeting}, John</Text>
+      <Text variant="h1">
+        {greeting}, {data?.firstName}
+      </Text>
     </div>
   );
 };

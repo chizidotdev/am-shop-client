@@ -79,7 +79,7 @@ const useSetupOptions = () => {
     {
       title: "Customize your store",
       description: "Add a logo, name, description, and social media links to your store.",
-      learnMoreLink: "https://www.example.com",
+      learnMoreLink: "",
       action: { link: "/dashboard/settings", text: "Customize" },
       secondaryAction: null,
       checked: !!store && !!store.name,
@@ -87,15 +87,16 @@ const useSetupOptions = () => {
     {
       title: "Add your first product",
       description: "Write a description, set a price, and upload a photo for your first product.",
-      learnMoreLink: "https://www.example.com",
-      action: { link: "/add-product", text: "Add Product" },
-      secondaryAction: { link: "/import-products", text: "Import Products" },
+      learnMoreLink: "",
+      action: { link: "/dashboard/products", text: "Add Product" },
+      secondaryAction: { link: "/dashboard/products", text: "Connect Vendor" },
+      // secondaryAction: { link: "/import-products", text: "Import Products" },
       checked: false,
     },
     {
       title: "Set up payments",
       description: "Connect your Opay account to start accepting payments.",
-      learnMoreLink: "https://www.example.com",
+      learnMoreLink: "",
       action: { link: "/connect-payment", text: "Connect Payment" },
       secondaryAction: null,
       checked: false,
@@ -103,7 +104,7 @@ const useSetupOptions = () => {
     {
       title: "Launch your store",
       description: "Share your store with the world and start selling.",
-      learnMoreLink: "https://www.example.com",
+      learnMoreLink: "",
       action: { link: "/launch-store", text: "Launch store" },
       secondaryAction: null,
       checked: false,

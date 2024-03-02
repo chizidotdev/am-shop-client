@@ -3,23 +3,26 @@ import { Text } from "@/ui/text";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/ui/tabs";
 import { StoreSettings } from "@/modules/dashboard/settings/store-settings";
 import { AccountSettings } from "@/modules/dashboard/settings/account-settings";
-import { Suspense } from "react";
+import { ComingSoonBadge } from "@/common/coming-soon-badge";
 
 export default function DashboardSettings() {
   return (
     <div className="flex flex-col gap-6">
       <div className="flex flex-col gap-2 border-b pb-4">
         <Text variant="h1">Settings</Text>
-        <Text>Manage your shop settings and set account preferences.</Text>
+        <Text>Manage your store settings and set account preferences.</Text>
       </div>
 
-      <Tabs defaultValue="shop" className="">
+      <Tabs defaultValue="store" className="">
         <TabsList className="grid w-full max-w-lg grid-cols-2">
-          <TabsTrigger value="shop">Shop</TabsTrigger>
-          <TabsTrigger value="account">Account</TabsTrigger>
+          <TabsTrigger value="store">Store</TabsTrigger>
+          <TabsTrigger disabled value="account">
+            Account &nbsp;
+            <ComingSoonBadge />
+          </TabsTrigger>
         </TabsList>
 
-        <TabsContent value="shop">
+        <TabsContent value="store">
           <Card>
             <CardHeader>
               <CardTitle>Shop</CardTitle>

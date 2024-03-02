@@ -7,6 +7,7 @@ import {
 } from "@/ui/dropdown-menu";
 import { Button } from "@/ui/button";
 import { GoChevronDown } from "react-icons/go";
+import { ComingSoonBadge } from "@/common/coming-soon-badge";
 
 export const OptionsMenu = () => {
   return (
@@ -21,8 +22,14 @@ export const OptionsMenu = () => {
         </DropdownMenuTrigger>
         <DropdownMenuContent>
           <DropdownMenuItem className="md:hidden">Add Product</DropdownMenuItem>
-          <DropdownMenuItem>Import</DropdownMenuItem>
-          <DropdownMenuItem>Export</DropdownMenuItem>
+          <DropdownMenuItem disabled>
+            Import &nbsp;
+            <ComingSoonBadge />
+          </DropdownMenuItem>
+          <DropdownMenuItem disabled>
+            Export &nbsp;
+            <ComingSoonBadge />
+          </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
       <Button className="hidden md:flex">Add Product</Button>

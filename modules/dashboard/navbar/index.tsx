@@ -32,18 +32,23 @@ export function DashboardNav() {
   }, []);
 
   if (status === "unauthenticated") {
-    redirect("/");
+    // redirect("/");
   }
 
   return (
-    <nav className={cn("sticky top-0 z-10 transition-all", hasScrolled && "border-b shadow-sm")}>
+    <nav
+      className={cn(
+        "sticky bg-background top-0 z-10 transition-all",
+        hasScrolled && "border-b shadow-sm",
+      )}
+    >
       <div className="border-b">
         <div className="flex items-center justify-between gap-5 max-w-7xl mx-auto p-5 py-3">
           <AppLogo />
 
           <div className="flex items-center gap-1">
             <Link href="/">
-              <Button variant="link">Shop</Button>
+              <Button variant="link">Store</Button>
             </Link>
             <Button variant="ghost" className="rounded-full h-10 w-10 p-2">
               <FaRegHeart size={18} />
