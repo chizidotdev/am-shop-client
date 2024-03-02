@@ -1,3 +1,4 @@
+import { DashboardProvider } from "@/modules/dashboard/context-store";
 import { DashboardNav } from "@/modules/dashboard/navbar";
 import React from "react";
 
@@ -5,7 +6,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   return (
     <div className="min-h-dvh">
       <DashboardNav />
-      <div className="max-w-7xl mx-auto px-5 py-10">{children}</div>
+      <div className="max-w-7xl mx-auto px-5 py-10">
+        <DashboardProvider>{children}</DashboardProvider>
+      </div>
     </div>
   );
 }

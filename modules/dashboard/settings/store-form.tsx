@@ -8,23 +8,26 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useUpdateStore } from "./useSettings";
+import { useCreateStore, useUpdateStore } from "./useSettings";
 
-export const StoreForm = ({ store }: { store: Store | undefined }) => {
+export const StoreForm = ({ store }: { store: Store | null }) => {
   const name = store?.name || "";
   const description = store?.description || "";
 
   const { mutate: update, isPending: isUpdating } = useUpdateStore();
-  const { mutate: create, isPending: isCreating } = useUpdateStore();
+  const { mutate: create, isPending: isCreating } = useCreateStore();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: { name, description },
   });
 
   function onSubmit(data: z.infer<typeof formSchema>) {
-    if (store) {
+    if (!!store) {
+      console.log("updating store");
+
       update(data);
     } else {
+      console.log("creating store");
       create(data);
     }
   }

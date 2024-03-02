@@ -1,12 +1,19 @@
 import api from "@/lib/axios";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useDashboard } from "../context-store";
 
 const USER_STORE_QUERY_KEY = "user-store";
+
 export const useUpdateStore = () => {
   const { invalidateQueries } = useQueryClient();
+  const { refetch } = useDashboard();
+
   const mutation = useMutation({
     mutationFn: updateStore,
-    onSuccess: () => invalidateQueries({ queryKey: [USER_STORE_QUERY_KEY] }),
+    onSuccess: () => {
+      refetch.store();
+      invalidateQueries({ queryKey: [USER_STORE_QUERY_KEY] });
+    },
   });
   return mutation;
 };
@@ -19,7 +26,16 @@ const updateStore = async (data: { name: string; description: string }) => {
 };
 
 export const useCreateStore = () => {
-  const mutation = useMutation({ mutationFn: createStore });
+  const { invalidateQueries } = useQueryClient();
+  const { refetch } = useDashboard();
+
+  const mutation = useMutation({
+    mutationFn: createStore,
+    onSuccess: () => {
+      refetch.store();
+      invalidateQueries({ queryKey: [USER_STORE_QUERY_KEY] });
+    },
+  });
   return mutation;
 };
 

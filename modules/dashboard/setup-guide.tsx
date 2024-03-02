@@ -7,8 +7,11 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Button, buttonVariants } from "@/ui/button";
 import Link from "next/link";
 import { OpayLink } from "@/common/opay-link";
+import { useDashboard } from "./context-store";
 
 export const SetupGuide = () => {
+  const { setupOptions, nextItemIdx } = useSetupOptions();
+
   return (
     <Card className="max-w-2xl">
       <CardHeader>
@@ -16,16 +19,16 @@ export const SetupGuide = () => {
         <Text>Follow these steps to get started with your new store.</Text>
       </CardHeader>
       <CardContent className="border-t px-0 pb-0">
-        <Accordion type="single" collapsible defaultValue="item-2">
+        <Accordion type="single" collapsible defaultValue={`item-${nextItemIdx}`}>
           {setupOptions.map((option, index) => (
             <AccordionItem
-              value={`item-${index + 1}`}
+              value={`item-${index}`}
               key={index}
               className="px-6 [&:last-child]:border-none"
             >
               <AccordionTrigger>
                 <div className="flex items-center gap-3">
-                  <Checkbox checked={index === 0} />
+                  <Checkbox checked={option.checked} />
                   <Text variant="h4">{option.title}</Text>
                 </div>
               </AccordionTrigger>
@@ -61,39 +64,58 @@ export const SetupGuide = () => {
 };
 
 type Action = { link: string; text: string };
-const setupOptions: {
+type SetupOption = {
+  checked: boolean;
   title: string;
   description: string;
   learnMoreLink: string;
   action: Action;
   secondaryAction: Action | null;
-}[] = [
-  {
-    title: "Customize your store",
-    description: "Add a logo, name, description, and social media links to your store.",
-    learnMoreLink: "https://www.example.com",
-    action: { link: "/dashboard/settings", text: "Customize" },
-    secondaryAction: null,
-  },
-  {
-    title: "Add your first product",
-    description: "Write a description, set a price, and upload a photo for your first product.",
-    learnMoreLink: "https://www.example.com",
-    action: { link: "/add-product", text: "Add Product" },
-    secondaryAction: { link: "/import-products", text: "Import Products" },
-  },
-  {
-    title: "Set up payments",
-    description: "Connect your Opay account to start accepting payments.",
-    learnMoreLink: "https://www.example.com",
-    action: { link: "/connect-payment", text: "Connect Payment" },
-    secondaryAction: null,
-  },
-  {
-    title: "Launch your store",
-    description: "Share your store with the world and start selling.",
-    learnMoreLink: "https://www.example.com",
-    action: { link: "/launch-store", text: "Launch store" },
-    secondaryAction: null,
-  },
-];
+};
+const useSetupOptions = () => {
+  const { store } = useDashboard();
+
+  const setupOptions: SetupOption[] = [
+    {
+      title: "Customize your store",
+      description: "Add a logo, name, description, and social media links to your store.",
+      learnMoreLink: "https://www.example.com",
+      action: { link: "/dashboard/settings", text: "Customize" },
+      secondaryAction: null,
+      checked: !!store && !!store.name,
+    },
+    {
+      title: "Add your first product",
+      description: "Write a description, set a price, and upload a photo for your first product.",
+      learnMoreLink: "https://www.example.com",
+      action: { link: "/add-product", text: "Add Product" },
+      secondaryAction: { link: "/import-products", text: "Import Products" },
+      checked: false,
+    },
+    {
+      title: "Set up payments",
+      description: "Connect your Opay account to start accepting payments.",
+      learnMoreLink: "https://www.example.com",
+      action: { link: "/connect-payment", text: "Connect Payment" },
+      secondaryAction: null,
+      checked: false,
+    },
+    {
+      title: "Launch your store",
+      description: "Share your store with the world and start selling.",
+      learnMoreLink: "https://www.example.com",
+      action: { link: "/launch-store", text: "Launch store" },
+      secondaryAction: null,
+      checked: false,
+    },
+  ];
+
+  const nextItem = setupOptions.find((option) => !option.checked);
+  const nextItemIdx = setupOptions.findIndex((option) => !option.checked);
+
+  return {
+    setupOptions,
+    nextItemIdx,
+    nextItem,
+  };
+};
