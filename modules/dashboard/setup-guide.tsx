@@ -90,7 +90,6 @@ const useSetupOptions = () => {
       learnMoreLink: "",
       action: { link: "/dashboard/products", text: "Add Product" },
       secondaryAction: { link: "/dashboard/products", text: "Connect Vendor" },
-      // secondaryAction: { link: "/import-products", text: "Import Products" },
       checked: false,
     },
     {

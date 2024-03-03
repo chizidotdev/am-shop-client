@@ -73,3 +73,21 @@
     @apply grid grid-cols-2 sm:grid-cols-[repeat(auto-fill,minmax(180px,1fr))] gap-5 gap-y-8 sm:gap-y-10;
   }
 }
+
+.filepond--item {
+  /* width: calc(33% - 0.5em); */
+}
+.filepond--root {
+  @apply shadow-sm rounded-md;
+}
+.filepond--panel-root {
+  background-color: hsl(var(--background)) !important;
+  border-width: 1px !important;
+}
+.filepond--drop-label {
+  color: hsl(var(--muted-foreground)) !important;
+  font-size: 0.9rem !important;
+}
+.filepond--root {
+  font-family: inherit !important;
+}

@@ -20,3 +20,20 @@ interface Store {
   createdAt: string;
   updatedAt: string;
 }
+
+interface Image {
+  id: string;
+  productId: string;
+  url: string;
+}
+interface Product {
+  id: string;
+  storeId: string;
+  name: string;
+  description: string;
+  price: number;
+  outOfStock: boolean;
+  images: Image[];
+  createdAt: string;
+  updatedAt: string;
+}

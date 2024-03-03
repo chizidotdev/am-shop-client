@@ -56,6 +56,15 @@ dependencies:
   date-and-time:
     specifier: ^3.1.1
     version: 3.1.1
+  filepond:
+    specifier: ^4.30.6
+    version: 4.30.6
+  filepond-plugin-image-exif-orientation:
+    specifier: ^1.0.11
+    version: 1.0.11(filepond@4.30.6)
+  filepond-plugin-image-preview:
+    specifier: ^4.6.12
+    version: 4.6.12(filepond@4.30.6)
   lucide-react:
     specifier: ^0.338.0
     version: 0.338.0(react@18.2.0)
@@ -71,6 +80,9 @@ dependencies:
   react-dom:
     specifier: ^18
     version: 18.2.0(react@18.2.0)
+  react-filepond:
+    specifier: ^7.1.2
+    version: 7.1.2(filepond@4.30.6)(react-dom@18.2.0)(react@18.2.0)
   react-hook-form:
     specifier: ^7.50.1
     version: 7.50.1(react@18.2.0)
@@ -83,6 +95,9 @@ dependencies:
   tailwindcss-animate:
     specifier: ^1.0.7
     version: 1.0.7(tailwindcss@3.4.1)
+  vaul:
+    specifier: ^0.9.0
+    version: 0.9.0(@types/react-dom@18.2.19)(@types/react@18.2.58)(react-dom@18.2.0)(react@18.2.0)
   zod:
     specifier: ^3.22.4
     version: 3.22.4
@@ -2183,6 +2198,26 @@ packages:
       flat-cache: 3.2.0
     dev: true
 
+  /filepond-plugin-image-exif-orientation@1.0.11(filepond@4.30.6):
+    resolution: {integrity: sha512-hLBc12Fk6Zkj3L8mSAn+elugHOqT5rLUbgVXQQIQjMe0FsGjtpoxqeVR6jt4IWHGat2L9sFAgU2TGmd1mqosCg==}
+    peerDependencies:
+      filepond: '>=3.x <5.x'
+    dependencies:
+      filepond: 4.30.6
+    dev: false
+
+  /filepond-plugin-image-preview@4.6.12(filepond@4.30.6):
+    resolution: {integrity: sha512-Y8ETX5QVV0mbPB0586UH8AUmG9tZg8PuN5bdEAIlZVJFTct5ebViJ7+Am94/VhTPjLqZjBf1zmDq5JU6XRsZKw==}
+    peerDependencies:
+      filepond: '>=4.x <5.x'
+    dependencies:
+      filepond: 4.30.6
+    dev: false
+
+  /filepond@4.30.6:
+    resolution: {integrity: sha512-gBsVKJgr5HFTkQSA/3R6utne4Qt6Pue0O3+k3IjjVBbaQxMgGMI0fXwoob9SdRRoULCs8BAhWjttM28hOAi/0w==}
+    dev: false
+
   /fill-range@7.0.1:
     resolution: {integrity: sha512-qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ==}
     engines: {node: '>=8'}
@@ -3158,6 +3193,18 @@ packages:
       scheduler: 0.23.0
     dev: false
 
+  /react-filepond@7.1.2(filepond@4.30.6)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-vrlx9o/n+jGikh6jLey+PpUGYtEZn8MdeB6JFeX/5/N/Mu75IHG+MFQbv8R27bNXvS41mDtV9Fo5DG+s6siVIA==}
+    peerDependencies:
+      filepond: '>=3.7.x < 5.x'
+      react: 16 - 18
+      react-dom: 16 - 18
+    dependencies:
+      filepond: 4.30.6
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
   /react-hook-form@7.50.1(react@18.2.0):
     resolution: {integrity: sha512-3PCY82oE0WgeOgUtIr3nYNNtNvqtJ7BZjsbxh6TnYNbXButaD5WpjOmTjdxZfheuHKR68qfeFnEDVYoSSFPMTQ==}
     engines: {node: '>=12.22.0'}
@@ -3753,6 +3800,20 @@ packages:
 
   /util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
+
+  /vaul@0.9.0(@types/react-dom@18.2.19)(@types/react@18.2.58)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-bZSySGbAHiTXmZychprnX/dE0EsSige88xtyyL3/MCRbrFotRPQZo7UdydGXZWw+CKbNOw5Ow8gwAo93/nB/Cg==}
+    peerDependencies:
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
+    dependencies:
+      '@radix-ui/react-dialog': 1.0.5(@types/react-dom@18.2.19)(@types/react@18.2.58)(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    transitivePeerDependencies:
+      - '@types/react'
+      - '@types/react-dom'
+    dev: false
 
   /which-boxed-primitive@1.0.2:
     resolution: {integrity: sha512-bwZdv0AKLpplFY2KZRX6TvyuN7ojjr7lwkg6ml0roIy9YeuSr7JS372qlNW18UQYzgYK9ziGcerWqZOmEn9VNg==}

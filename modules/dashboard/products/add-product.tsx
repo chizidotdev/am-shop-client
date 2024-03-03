@@ -1,3 +1,6 @@
+"use client";
+
+import { Button } from "@/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -6,9 +9,29 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/ui/dialog";
+import { AddProductForm } from "./add-product-form";
+import { ScrollArea, ScrollBar } from "@/ui/scroll-area";
+import { useState } from "react";
 
-import React from "react";
+export function AddProduct() {
+  const [open, setOpen] = useState(false);
 
-export const AddProduct = (props: {}) => {
-  return <div></div>;
-};
+  return (
+    <Dialog open={open} onOpenChange={setOpen}>
+      <DialogTrigger>
+        <Button>Add Product</Button>
+      </DialogTrigger>
+      <DialogContent className="max-w-md">
+        <DialogHeader className="text-center sm:text-center items-center">
+          <DialogTitle>Add Product</DialogTitle>
+          <DialogDescription>Add product details and images to your store.</DialogDescription>
+        </DialogHeader>
+
+        <ScrollArea className="max-h-full">
+          <AddProductForm callback={() => setOpen(false)} />
+          <ScrollBar />
+        </ScrollArea>
+      </DialogContent>
+    </Dialog>
+  );
+}
