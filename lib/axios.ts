@@ -1,5 +1,6 @@
 import axios, { AxiosInstance } from "axios";
 import { BASE_REST_URL } from "./constants";
+import { toast } from "sonner";
 
 interface AxiosClientOptions {
   baseURL: string;
@@ -23,6 +24,14 @@ export const createAxiosClient = ({ options }: AxiosClient) => {
       return error;
     },
   );
+
+  client.interceptors.response.use((response) => {
+    toast.success(response.data.message);
+    if (!!response.data.error) {
+      toast.error(response.data.message);
+    }
+    return response;
+  });
 
   return client;
 };

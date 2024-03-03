@@ -29,15 +29,15 @@ const DashboardProductCard = ({ product }: { product: Product }) => {
           />
         </div>
       </CardHeader>
-      <CardContent className="py-3 px-2 w-1/2">
+      <CardContent className="py-3 px-2 w-1/2 flex flex-col justify-between">
         <div className="flex justify-between items-center">
-          <Text>{product.title}</Text>
+          <Text className="w-full leading-5">{product.title}</Text>
           <ProductActions product={product} />
         </div>
         <Text asLabel className="line-clamp-2">
           {product.description}
         </Text>
-        <div className="flex justify-between items-center mt-3">
+        <div className="flex justify-between items-center mt-2">
           <Text variant="h4">{formatCurrency(product.price)}</Text>
         </div>
       </CardContent>

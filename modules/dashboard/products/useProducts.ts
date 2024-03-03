@@ -5,15 +5,17 @@ export const useCreateProduct = (onSuccess: () => void) => {
   const queryClient = useQueryClient();
   return useMutation({
     mutationFn: createProduct,
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["products"] });
-      onSuccess();
+    onSuccess: (data) => {
+      if (!data.error) {
+        queryClient.invalidateQueries({ queryKey: ["products"] });
+        onSuccess();
+      }
     },
   });
 };
 
-const createProduct = async ({ data }: { data: FormData }) => {
-  const response = await api.post(`/products`, data, {
+const createProduct = async ({ storeId, data }: { storeId: string; data: FormData }) => {
+  const response = await api.post(`/stores/${storeId}/products`, data, {
     headers: { "Content-Type": "multipart/form-data" },
   });
   return response.data;
@@ -31,7 +33,7 @@ const getProducts = async (
   storeId: string | undefined,
 ): Promise<APIResponse<Product[]> | undefined> => {
   if (!storeId) return;
-  const response = await api.get(`stores/${storeId}/products`);
+  const response = await api.get(`/stores/${storeId}/products`);
   return response.data;
 };
 

@@ -22,8 +22,8 @@ export const OptionsMenu = () => {
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent>
-          <AddProduct>
-            <DropdownMenuItem className="md:hidden">Add Product</DropdownMenuItem>
+          <AddProduct className="md:hidden">
+            <DropdownMenuItem>Add Product</DropdownMenuItem>
           </AddProduct>
 
           <DropdownMenuItem disabled>
@@ -36,8 +36,8 @@ export const OptionsMenu = () => {
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-      <AddProduct>
-        <Button className="hidden md:flex">Add Product</Button>
+      <AddProduct className="hidden md:flex">
+        <Button>Add Product</Button>
       </AddProduct>
     </div>
   );

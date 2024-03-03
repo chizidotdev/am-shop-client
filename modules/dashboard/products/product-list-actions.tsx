@@ -39,8 +39,8 @@ export const ProductActions = ({ product }: { product: Product }) => {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DropdownMenu>
-        <DropdownMenuTrigger asChild className="mx-auto flex justify-center">
-          <Button variant="ghost" className="h-8 w-8 p-0">
+        <DropdownMenuTrigger className="flex mx-auto">
+          <Button variant="ghost" size="icon">
             <span className="sr-only">Open menu</span>
             <DotsVerticalIcon className="h-4 w-4" />
           </Button>

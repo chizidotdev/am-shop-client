@@ -73,7 +73,7 @@
     @apply grid grid-cols-2 sm:grid-cols-[repeat(auto-fill,minmax(180px,1fr))] gap-5 gap-y-8 sm:gap-y-10;
   }
   .dashboard-product-grid {
-    @apply grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-5 gap-y-8 sm:gap-y-10;
+    @apply grid grid-cols-[repeat(auto-fill,minmax(230px,1fr))] gap-5 gap-y-8 sm:gap-y-10;
   }
 }
 

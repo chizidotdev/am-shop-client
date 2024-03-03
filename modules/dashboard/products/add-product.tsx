@@ -12,12 +12,18 @@ import { AddProductForm } from "./add-product-form";
 import { ScrollArea, ScrollBar } from "@/ui/scroll-area";
 import { useState } from "react";
 
-export function AddProduct({ children }: { children: React.ReactNode }) {
+export function AddProduct({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
   const [open, setOpen] = useState(false);
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger>{children}</DialogTrigger>
+      <DialogTrigger className={className}>{children}</DialogTrigger>
       <DialogContent className="max-w-md">
         <DialogHeader className="text-center sm:text-center items-center">
           <DialogTitle>Add Product</DialogTitle>
