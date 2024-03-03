@@ -12,7 +12,7 @@ export const useCreateProduct = (onSuccess: () => void) => {
   });
 };
 
-export const createProduct = async ({ data }: { data: FormData }) => {
+const createProduct = async ({ data }: { data: FormData }) => {
   const response = await api.post(`/products`, data, {
     headers: { "Content-Type": "multipart/form-data" },
   });
@@ -27,10 +27,26 @@ export const useGetProducts = (store: Store | null) => {
   });
 };
 
-export const getProducts = async (
+const getProducts = async (
   storeId: string | undefined,
 ): Promise<APIResponse<Product[]> | undefined> => {
   if (!storeId) return;
   const response = await api.get(`stores/${storeId}/products`);
+  return response.data;
+};
+
+export const useDeleteProduct = (onSuccess: () => void) => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: deleteProduct,
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["products"] });
+      onSuccess();
+    },
+  });
+};
+
+const deleteProduct = async ({ id, storeId }: { id: string; storeId: string }) => {
+  const response = await api.delete(`stores/${storeId}/products/${id}`);
   return response.data;
 };

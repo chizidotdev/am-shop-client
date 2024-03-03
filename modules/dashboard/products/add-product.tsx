@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -13,14 +12,12 @@ import { AddProductForm } from "./add-product-form";
 import { ScrollArea, ScrollBar } from "@/ui/scroll-area";
 import { useState } from "react";
 
-export function AddProduct() {
+export function AddProduct({ children }: { children: React.ReactNode }) {
   const [open, setOpen] = useState(false);
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger>
-        <Button>Add Product</Button>
-      </DialogTrigger>
+      <DialogTrigger>{children}</DialogTrigger>
       <DialogContent className="max-w-md">
         <DialogHeader className="text-center sm:text-center items-center">
           <DialogTitle>Add Product</DialogTitle>

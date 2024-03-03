@@ -3,7 +3,7 @@ import { Text } from "@/ui/text";
 import { Card, CardContent, CardHeader } from "@/ui/card";
 import Image from "next/image";
 import { formatCurrency } from "@/lib/utils";
-import { ProductActions } from "./product-actions";
+import { ProductActions } from "./product-list-actions";
 
 export const DashboardProductGrid = ({ products }: { products: Product[] }) => {
   return (

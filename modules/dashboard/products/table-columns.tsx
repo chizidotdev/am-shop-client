@@ -6,7 +6,7 @@ import { Text } from "@/ui/text";
 import { Checkbox } from "@/ui/checkbox";
 import { CaretSortIcon } from "@radix-ui/react-icons";
 import { ColumnDef } from "@tanstack/react-table";
-import { ProductActions } from "./product-actions";
+import { ProductActions } from "./product-list-actions";
 
 export const columns: ColumnDef<Product>[] = [
   {

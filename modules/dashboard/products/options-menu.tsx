@@ -8,6 +8,7 @@ import {
 import { Button } from "@/ui/button";
 import { GoChevronDown } from "react-icons/go";
 import { ComingSoonBadge } from "@/common/coming-soon-badge";
+import { AddProduct } from "./add-product";
 
 export const OptionsMenu = () => {
   return (
@@ -21,7 +22,10 @@ export const OptionsMenu = () => {
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent>
-          <DropdownMenuItem className="md:hidden">Add Product</DropdownMenuItem>
+          <AddProduct>
+            <DropdownMenuItem className="md:hidden">Add Product</DropdownMenuItem>
+          </AddProduct>
+
           <DropdownMenuItem disabled>
             Import &nbsp;
             <ComingSoonBadge />
@@ -32,7 +36,9 @@ export const OptionsMenu = () => {
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-      <Button className="hidden md:flex">Add Product</Button>
+      <AddProduct>
+        <Button className="hidden md:flex">Add Product</Button>
+      </AddProduct>
     </div>
   );
 };

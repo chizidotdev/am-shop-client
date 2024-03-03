@@ -30,7 +30,9 @@ export default function DashboardProducts() {
         <Text>Start by adding your products to the store for your customers to see.</Text>
 
         <div className="flex gap-3 mt-5">
-          <AddProduct />
+          <AddProduct>
+            <Button>Add Product</Button>
+          </AddProduct>
           <Button variant="secondary" disabled>
             Import &nbsp;
             <ComingSoonBadge />
