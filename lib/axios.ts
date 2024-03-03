@@ -26,10 +26,16 @@ export const createAxiosClient = ({ options }: AxiosClient) => {
   );
 
   client.interceptors.response.use((response) => {
-    toast.success(response.data.message);
+    if (!response) {
+      toast.error("An error occurred. Please try again later.");
+      return response;
+    }
     if (!!response.data.error) {
       toast.error(response.data.message);
+      return response;
     }
+
+    toast.success(response.data.message);
     return response;
   });
 

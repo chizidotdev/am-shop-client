@@ -16,6 +16,7 @@ const Toaster = ({ ...props }: ToasterProps) => {
         classNames: {
           toast:
             "group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg",
+          info: "group-[.toaster]:bg-primary group-[.toaster]:text-primary-foreground",
           success: "group-[.toaster]:bg-success group-[.toaster]:text-success-foreground",
           error: "group-[.toaster]:bg-destructive group-[.toaster]:text-destructive-foreground",
           description: "group-[.toast]:text-muted-foreground",

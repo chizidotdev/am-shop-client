@@ -8,7 +8,7 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/ui/card";
 import { Text } from "@/ui/text";
 import { ToggleGroup, ToggleGroupItem } from "@/ui/toggle-group";
 import React from "react";
-import { CiGrid2H, CiViewTable } from "react-icons/ci";
+import { CiGrid41, CiViewTable } from "react-icons/ci";
 import { DataTable } from "@/ui/data-table";
 import { dashboardProductColumns } from "@/modules/dashboard/products/table-columns";
 import { FilterOption, FilterOptions } from "@/modules/dashboard/products/filter-options";
@@ -81,7 +81,7 @@ export default function DashboardProducts() {
             </div>
             <ToggleGroup type="single" value={view} onValueChange={setView}>
               <ToggleGroupItem value="grid">
-                <CiGrid2H size={24} />
+                <CiGrid41 size={24} />
               </ToggleGroupItem>
               <ToggleGroupItem value="table">
                 <CiViewTable size={24} />
@@ -94,8 +94,9 @@ export default function DashboardProducts() {
           <Text variant="h3">Connect to a vendor</Text>
           <Text>Connect to a vendor to import products from your vendor to your store.</Text>
 
-          <Button className="mt-5" variant="outline">
-            Connect Vendor
+          <Button className="mt-5" variant="outline" disabled>
+            Connect Vendor &nbsp;
+            <ComingSoonBadge />
           </Button>
         </CardFooter>
       </Card>

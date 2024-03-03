@@ -2,40 +2,40 @@ import React, { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { Button } from "@/ui/button";
+import { Switch } from "@/ui/switch";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/ui/form";
 import { Input } from "@/ui/input";
 import { z } from "zod";
 import { Textarea } from "@/ui/textarea";
 import { AddProductImage } from "./add-product-image";
-import { useCreateProduct } from "./useProducts";
+import { useUpdateProduct } from "./useProducts";
 import { useDashboard } from "../context-store";
 
-export const AddProductForm = ({ callback }: { callback: () => void }) => {
+export const EditProductForm = ({
+  callback,
+  product,
+}: {
+  product: Product;
+  callback: () => void;
+}) => {
   const { store } = useDashboard();
-  const { mutate, isPending } = useCreateProduct(callback);
+  const { mutate, isPending } = useUpdateProduct(callback);
 
   const [images, setImages] = useState<File[]>([]);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      title: "",
-      description: "",
+      title: product.title,
+      price: product.price,
+      description: product.description,
+      outOfStock: product.outOfStock,
     },
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     if (!store) return;
 
-    const formData = new FormData();
-
-    for (const image of images) {
-      formData.append("images", image);
-    }
-    for (const key in values) {
-      formData.append(key, (values as any)[key]);
-    }
-
-    mutate({ storeId: store.id, data: formData });
+    mutate({ id: product.id, storeId: store.id, data: values });
   }
 
   return (
@@ -85,6 +85,21 @@ export const AddProductForm = ({ callback }: { callback: () => void }) => {
 
         <AddProductImage files={images} setFiles={setImages} />
 
+        <FormField
+          control={form.control}
+          name="outOfStock"
+          render={({ field }) => (
+            <FormItem className="flex flex-row items-center justify-between rounded-lg border p-3 shadow-sm">
+              <div className="space-y-0.5">
+                <FormLabel>Out of Stock?</FormLabel>
+              </div>
+              <FormControl>
+                <Switch checked={field.value} onCheckedChange={field.onChange} />
+              </FormControl>
+            </FormItem>
+          )}
+        />
+
         <Button type="submit" className="self-end mt-5" isLoading={isPending}>
           Submit
         </Button>
@@ -102,4 +117,5 @@ const formSchema = z.object({
     .number({ invalid_type_error: "Price must be a number" })
     .nonnegative({ message: "Price must be a positive number" }),
   description: z.string(),
+  outOfStock: z.boolean(),
 });

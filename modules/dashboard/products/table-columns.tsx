@@ -3,25 +3,12 @@
 import { formatCurrency } from "@/lib/utils";
 import { Button } from "@/ui/button";
 import { Text } from "@/ui/text";
+import { Badge } from "@/ui/badge";
 import { Checkbox } from "@/ui/checkbox";
 import { CaretSortIcon } from "@radix-ui/react-icons";
 import { ColumnDef } from "@tanstack/react-table";
 import { ProductActions } from "./product-list-actions";
-
-export const columns: ColumnDef<Product>[] = [
-  {
-    accessorKey: "title",
-    header: "Title",
-  },
-  {
-    accessorKey: "description",
-    header: "Description",
-  },
-  {
-    accessorKey: "price",
-    header: "Price",
-  },
-];
+import { EditProduct } from "./edit-product";
 
 export const dashboardProductColumns: ColumnDef<Product>[] = [
   {
@@ -58,12 +45,19 @@ export const dashboardProductColumns: ColumnDef<Product>[] = [
         </Button>
       );
     },
-    cell: ({ row }) => <div className="capitalize px-4">{row.getValue("title")}</div>,
+    cell: ({ row }) => (
+      <EditProduct product={row.original}>
+        <Button variant="ghost" className="capitalize px-4">
+          {row.getValue("title")}
+        </Button>
+      </EditProduct>
+    ),
     enableHiding: false,
   },
   {
     accessorKey: "description",
     header: "Description",
+    cell: ({ row }) => <Text className="min-w-60">{row.getValue("description")}</Text>,
   },
   {
     accessorKey: "price",
@@ -85,6 +79,20 @@ export const dashboardProductColumns: ColumnDef<Product>[] = [
         <Text className="text-right px-4" variant="h4">
           {formatted}
         </Text>
+      );
+    },
+  },
+  {
+    accessorKey: "outOfStock",
+    header: "Status",
+    cell: ({ row }) => {
+      const outOfStock = row.getValue("outOfStock");
+      return (
+        <div className="min-w-24">
+          <Badge variant={outOfStock ? "destructive" : "outline"}>
+            {outOfStock ? "Out of stock" : "In stock"}
+          </Badge>
+        </div>
       );
     },
   },

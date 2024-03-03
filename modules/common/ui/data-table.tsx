@@ -60,7 +60,7 @@ export function DataTable<TData, TValue>({ columns, data }: DataTableProps<TData
         <Input
           placeholder="Filter items..."
           value={(table.getColumn("title")?.getFilterValue() as string) ?? ""}
-          onChange={(event) => table.getColumn("email")?.setFilterValue(event.target.value)}
+          onChange={(event) => table.getColumn("title")?.setFilterValue(event.target.value)}
           className="max-w-sm"
         />
         <DropdownMenu>

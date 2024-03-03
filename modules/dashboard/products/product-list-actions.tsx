@@ -20,20 +20,39 @@ import {
 } from "@/ui/dialog";
 import { Button } from "@/ui/button";
 import { DotsVerticalIcon } from "@radix-ui/react-icons";
-import { useDeleteProduct } from "./useProducts";
+import { useDeleteProduct, useUpdateProduct } from "./useProducts";
 import { useDashboard } from "../context-store";
+import { toast } from "sonner";
 
 export const ProductActions = ({ product }: { product: Product }) => {
-  const productLink = `/products/${product.id}`;
   const { store } = useDashboard();
 
   const [open, setOpen] = React.useState(false);
-  const { mutate, isPending } = useDeleteProduct(() => setOpen(false));
+  const { mutate: deleteProductMutation, isPending } = useDeleteProduct(() => setOpen(false));
+
+  const { mutate: updateProductMutation } = useUpdateProduct();
+
+  const toggleStockStatus = () => {
+    if (!store?.id) return;
+
+    updateProductMutation({
+      id: product.id,
+      storeId: store.id,
+      data: { outOfStock: !product.outOfStock },
+    });
+  };
 
   const deleteProduct = () => {
     if (!store?.id) return;
 
-    mutate({ id: product.id, storeId: store?.id });
+    deleteProductMutation({ id: product.id, storeId: store?.id });
+  };
+
+  const copyProductLink = async () => {
+    if (!window || !product) return;
+    const productLink = `${window.location.origin}/products/${product.id}`;
+    await navigator.clipboard.writeText(productLink);
+    toast.info("Product Link copied to clipboard");
   };
 
   return (
@@ -47,12 +66,11 @@ export const ProductActions = ({ product }: { product: Product }) => {
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
           <DropdownMenuLabel>Actions</DropdownMenuLabel>
-          <DropdownMenuItem onClick={() => navigator.clipboard.writeText(productLink)}>
-            Copy product Link
-          </DropdownMenuItem>
+          <DropdownMenuItem onClick={copyProductLink}>Copy product Link</DropdownMenuItem>
           <DropdownMenuSeparator />
-          <DropdownMenuItem>View Product</DropdownMenuItem>
-          <DropdownMenuItem disabled>Mark out of stock</DropdownMenuItem>
+          <DropdownMenuItem onClick={toggleStockStatus}>
+            {product.outOfStock ? 'Label "In Stock"' : 'Label "Out of Stock"'}
+          </DropdownMenuItem>
           <DialogTrigger className="w-full">
             <DropdownMenuItem className="text-destructive">Delete</DropdownMenuItem>
           </DialogTrigger>

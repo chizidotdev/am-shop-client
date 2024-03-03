@@ -52,3 +52,27 @@ const deleteProduct = async ({ id, storeId }: { id: string; storeId: string }) =
   const response = await api.delete(`stores/${storeId}/products/${id}`);
   return response.data;
 };
+
+export const useUpdateProduct = (onSuccess?: () => void) => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: updateProduct,
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["products"] });
+      onSuccess && onSuccess();
+    },
+  });
+};
+
+const updateProduct = async ({
+  id,
+  storeId,
+  data,
+}: {
+  id: string;
+  storeId: string;
+  data: Partial<Product>;
+}) => {
+  const response = await api.patch(`stores/${storeId}/products/${id}`, data);
+  return response.data;
+};
