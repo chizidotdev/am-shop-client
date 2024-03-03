@@ -73,7 +73,7 @@ type SetupOption = {
   secondaryAction: Action | null;
 };
 const useSetupOptions = () => {
-  const { store } = useDashboard();
+  const { store, products } = useDashboard();
 
   const setupOptions: SetupOption[] = [
     {
@@ -90,7 +90,7 @@ const useSetupOptions = () => {
       learnMoreLink: "",
       action: { link: "/dashboard/products", text: "Add Product" },
       secondaryAction: { link: "/dashboard/products", text: "Connect Vendor" },
-      checked: false,
+      checked: !!products.length,
     },
     {
       title: "Set up payments",

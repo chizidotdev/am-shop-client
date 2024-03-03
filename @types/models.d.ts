@@ -29,7 +29,7 @@ interface Image {
 interface Product {
   id: string;
   storeId: string;
-  name: string;
+  title: string;
   description: string;
   price: number;
   outOfStock: boolean;
