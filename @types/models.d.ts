@@ -26,12 +26,13 @@ interface Image {
   productId: string;
   url: string;
 }
+type Money = number;
 interface Product {
   id: string;
   storeId: string;
   title: string;
   description: string;
-  price: number;
+  price: Money;
   outOfStock: boolean;
   images: Image[];
   createdAt: string;

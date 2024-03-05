@@ -12,11 +12,13 @@ import { redirect, usePathname } from "next/navigation";
 import Link from "next/link";
 import { UserMenu } from "@/modules/auth/user-menu";
 import { useSession } from "@/modules/auth/session-context";
+import { useDashboard } from "../context-store";
 
 export function DashboardNav() {
   const [hasScrolled, setHasScrolled] = React.useState(false);
   const pathname = usePathname();
   const { status } = useSession();
+  const { store } = useDashboard();
 
   React.useEffect(() => {
     const setScrollHandler = () => {
@@ -32,7 +34,7 @@ export function DashboardNav() {
   }, []);
 
   if (status === "unauthenticated") {
-    // redirect("/");
+    redirect("/");
   }
 
   return (
@@ -44,12 +46,14 @@ export function DashboardNav() {
     >
       <div className="border-b">
         <div className="flex items-center justify-between gap-5 max-w-7xl mx-auto p-5 py-3">
-          <AppLogo />
+          <AppLogo withText />
 
           <div className="flex items-center gap-1">
-            <Link href="/">
-              <Button variant="link">Store</Button>
-            </Link>
+            {store && (
+              <Link href={`/s/${store.id}`}>
+                <Button variant="link">Store</Button>
+              </Link>
+            )}
             <Button variant="ghost" className="rounded-full h-10 w-10 p-2">
               <FaRegHeart size={18} />
             </Button>

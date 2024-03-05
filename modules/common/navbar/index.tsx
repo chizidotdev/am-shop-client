@@ -33,7 +33,7 @@ export function MainNav() {
       )}
     >
       <div className="flex items-center justify-between gap-5 max-w-7xl mx-auto">
-        <AppLogo />
+        <AppLogo withText />
 
         <StorefrontSearch className="hidden sm:flex flex-1 max-w-lg mx-auto w-full" />
 
