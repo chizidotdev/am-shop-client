@@ -1,0 +1,89 @@
+import React from "react";
+import { ProductPrice } from "@/modules/store-front/product-price";
+import { Text } from "@/ui/text";
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from "@/ui/avatar";
+import { QuantitySelector } from "@/modules/product/quantity-selector";
+import { OpayLink } from "@/common/opay-link";
+import { LikeButton } from "@/modules/store-front/like-button";
+import { getStoreProductById } from "@/modules/store-front/useStore";
+
+export default async function StoreFrontProduct({
+  params: { productId },
+}: {
+  params: { productId: string };
+}) {
+  const productData = await getStoreProductById(productId as string);
+
+  if (!productData) {
+    return null;
+  }
+
+  const { data: product } = productData;
+
+  if (!product) {
+    return null;
+  }
+
+  return (
+    <div className="flex flex-col gap-4">
+      <div className="flex flex-col md:grid grid-cols-[3fr_2fr] gap-4 md:gap-10">
+        <div className="flex flex-col">
+          <div className="relative aspect-square w-full sm:w-[70%] md:w-full self-center">
+            <Image
+              fill
+              src="/preview.webp"
+              alt={product.title}
+              className="rounded-lg object-cover"
+              priority
+            />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-8">
+          <div>
+            <Link href={`/s/${product.store.id}`} className="flex items-center gap-2 w-min">
+              <Avatar className="rounded-lg">
+                <AvatarImage src="/preview-pp.webp" alt={product.store.name} />
+                <AvatarFallback>{product.store.name.charAt(0).toUpperCase()}</AvatarFallback>
+              </Avatar>
+              <Text>{product.store.name}</Text>
+            </Link>
+
+            <div className="flex items-center justify-between gap-2">
+              <Text variant="h3">{product.title}</Text>
+              <LikeButton />
+            </div>
+            <ProductPrice price={product.price} />
+          </div>
+
+          <div className="flex flex-col gap-5">
+            {/* <ProductOptions options={options} variants={variants.nodes} /> */}
+            <QuantitySelector />
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <Button>Add to cart</Button>
+            <Button variant="secondary">Buy now</Button>
+            <Text asLabel className="text-xs text-center">
+              Checkout powered by&nbsp;
+              <OpayLink />
+            </Text>
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <Text variant="h4">Description</Text>
+            <Text>{product.description}</Text>
+            {/* <Text */}
+            {/*   className="text-sm *:list-disc *:list-inside line-clamp-6" */}
+            {/*   dangerouslySetInnerHTML={{ __html: descriptionHtml }} */}
+            {/* /> */}
+            {/* <Button variant="link">Read more</Button> */}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

@@ -23,11 +23,8 @@ export const StoreForm = ({ store }: { store: Store | null }) => {
 
   function onSubmit(data: z.infer<typeof formSchema>) {
     if (!!store) {
-      console.log("updating store");
-
       update(data);
     } else {
-      console.log("creating store");
       create(data);
     }
   }

@@ -21,3 +21,8 @@ export const getStoreProducts = async (storeId: string) => {
   const response = await api.get<APIResponse<Product[]>>(`/stores/${storeId}/products`);
   return response.data;
 };
+
+export const getStoreProductById = async (productId: string) => {
+  const response = await api.get<APIResponse<ProductDetail>>(`/products/${productId}`);
+  return response.data;
+};

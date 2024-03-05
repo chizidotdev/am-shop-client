@@ -1,14 +1,17 @@
 "use client";
+import { useState } from "react";
 import { shopData, shopProductSearchData } from "@/lib/data";
 import Image from "next/image";
 import { ProductCard } from "@/modules/product/product-card";
 import { Button } from "@/ui/button";
 import { Text } from "@/ui/text";
+import { ScrollArea, ScrollBar } from "@/ui/scroll-area";
 import { Input } from "@/ui/input";
 import { BiSearch } from "react-icons/bi";
 
 export default function Home() {
   const { name, visualTheme } = shopData;
+  const [selected, setSelected] = useState("All");
 
   return (
     <main className="flex min-h-screen flex-col gap-10 mb-10">
@@ -39,6 +42,25 @@ export default function Home() {
       <section className="flex flex-col gap-5">
         <Text variant="h3">Products</Text>
 
+        <ScrollArea>
+          <div className="flex items-center gap-2">
+            {categories.map((category) => {
+              const active = selected === category;
+
+              return (
+                <Button
+                  key={category}
+                  variant={active ? "secondary" : "ghost"}
+                  onClick={() => setSelected(category)}
+                >
+                  {category}
+                </Button>
+              );
+            })}
+          </div>
+          <ScrollBar orientation="horizontal" className="h-0" />
+        </ScrollArea>
+
         <Input placeholder={`Search ${name}`} className="max-w-lg" icon={<BiSearch />} />
 
         <div className="flex flex-col gap-5">
@@ -55,3 +77,5 @@ export default function Home() {
     </main>
   );
 }
+
+const categories = ["All", "Clothing", "Shoes", "Accessories", "Sports"];

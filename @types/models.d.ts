@@ -38,3 +38,7 @@ interface Product {
   createdAt: string;
   updatedAt: string;
 }
+
+interface ProductDetail extends Product {
+  store: Store;
+}
