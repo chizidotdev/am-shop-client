@@ -13,6 +13,7 @@ import Link from "next/link";
 import { UserMenu } from "@/modules/auth/user-menu";
 import { useSession } from "@/modules/auth/session-context";
 import { useDashboard } from "../context-store";
+import { RightNav } from "@/common/navbar/right-nav";
 
 export function DashboardNav() {
   const [hasScrolled, setHasScrolled] = React.useState(false);
@@ -48,20 +49,13 @@ export function DashboardNav() {
         <div className="flex items-center justify-between gap-5 max-w-7xl mx-auto p-5 py-3">
           <AppLogo withText />
 
-          <div className="flex items-center gap-1">
+          <RightNav>
             {store && (
               <Link href={`/s/${store.id}`}>
                 <Button variant="link">Store</Button>
               </Link>
             )}
-            <Button variant="ghost" className="rounded-full h-10 w-10 p-2">
-              <FaRegHeart size={18} />
-            </Button>
-            <Button variant="ghost" className="rounded-full h-10 w-10 p-2">
-              <MdOutlineShoppingBag size={20} />
-            </Button>
-            <UserMenu />
-          </div>
+          </RightNav>
         </div>
       </div>
 

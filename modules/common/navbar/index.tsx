@@ -3,11 +3,8 @@
 import React from "react";
 import { AppLogo } from "@/common/app-logo";
 import { cn } from "@/lib/utils";
-import { MdOutlineShoppingBag } from "react-icons/md";
-import { FaRegHeart } from "react-icons/fa";
-import { Button } from "@/ui/button";
 import { StorefrontSearch } from "./storefront-search";
-import { AuthMenu } from "@/modules/auth/login";
+import { RightNav } from "./right-nav";
 
 export function MainNav() {
   const [hasScrolled, setHasScrolled] = React.useState(false);
@@ -37,15 +34,7 @@ export function MainNav() {
 
         <StorefrontSearch className="hidden sm:flex flex-1 max-w-lg mx-auto w-full" />
 
-        <div className="flex items-center gap-1">
-          <Button variant="ghost" className="rounded-full h-10 w-10 p-2">
-            <FaRegHeart size={18} />
-          </Button>
-          <Button variant="ghost" className="rounded-full h-10 w-10 p-2">
-            <MdOutlineShoppingBag size={20} />
-          </Button>
-          <AuthMenu />
-        </div>
+        <RightNav />
       </div>
 
       <StorefrontSearch className="sm:hidden w-full mt-5" />

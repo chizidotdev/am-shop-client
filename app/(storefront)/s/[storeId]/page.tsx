@@ -27,7 +27,7 @@ export default async function Home({ params: { storeId } }: { params: { storeId:
             <div className="relative aspect-square h-12 self-center">
               <Image
                 fill
-                src={store.image}
+                src="/preview-pp.webp"
                 alt={store.name}
                 className="rounded-lg object-cover"
                 priority
