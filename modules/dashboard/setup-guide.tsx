@@ -10,7 +10,12 @@ import { OpayLink } from "@/common/opay-link";
 import { useDashboard } from "./context-store";
 
 export const SetupGuide = () => {
+  const { isFetchingStore, isFetchingProducts } = useDashboard();
   const { setupOptions, nextItemIdx } = useSetupOptions();
+
+  if (isFetchingStore || isFetchingProducts) {
+    return null;
+  }
 
   return (
     <Card className="max-w-2xl">

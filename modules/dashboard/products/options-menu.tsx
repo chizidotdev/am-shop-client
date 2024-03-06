@@ -17,15 +17,11 @@ export const OptionsMenu = () => {
       <DropdownMenu>
         <DropdownMenuTrigger>
           <Button variant="outline">
-            Options&nbsp;
+            <span className="hidden sm:inline">Options&nbsp;</span>
             <GoChevronDown className="mt-0.5" />
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent>
-          <AddProduct className="md:hidden">
-            <DropdownMenuItem>Add Product</DropdownMenuItem>
-          </AddProduct>
-
           <DropdownMenuItem disabled>
             Import &nbsp;
             <ComingSoonBadge />
@@ -36,7 +32,7 @@ export const OptionsMenu = () => {
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-      <AddProduct className="hidden md:flex">
+      <AddProduct>
         <Button>Add Product</Button>
       </AddProduct>
     </div>

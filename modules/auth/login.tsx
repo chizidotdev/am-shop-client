@@ -16,14 +16,14 @@ import { FaCircleNotch } from "react-icons/fa";
 import { useSession } from "./session-context";
 import { UserMenu } from "./user-menu";
 
-const Login = () => {
+export const Login = ({ children }: { children?: React.ReactNode }) => {
   const [isOpen, setIsOpen] = useState(false);
   const { isSuccess, isLoading, login } = useGoogleLogin();
 
   return (
     <Dialog open={isOpen && !isSuccess} onOpenChange={setIsOpen}>
       <DialogTrigger>
-        <Button variant="outline">Sign In</Button>
+        {children ? children : <Button variant="outline">Sign In</Button>}
       </DialogTrigger>
       <DialogContent className="max-w-md">
         <DialogHeader className="text-center sm:text-center items-center">

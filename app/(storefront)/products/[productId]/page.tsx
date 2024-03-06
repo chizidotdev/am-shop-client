@@ -3,12 +3,10 @@ import { ProductPrice } from "@/modules/store-front/product-price";
 import { Text } from "@/ui/text";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/ui/avatar";
-import { QuantitySelector } from "@/modules/product/quantity-selector";
-import { OpayLink } from "@/common/opay-link";
 import { LikeButton } from "@/modules/store-front/like-button";
 import { getStoreProductById } from "@/modules/store-front/useStore";
+import { ProductDetail } from "./product-detail";
 
 export default async function StoreFrontProduct({
   params: { productId },
@@ -59,19 +57,7 @@ export default async function StoreFrontProduct({
             <ProductPrice price={product.price} />
           </div>
 
-          <div className="flex flex-col gap-5">
-            {/* <ProductOptions options={options} variants={variants.nodes} /> */}
-            <QuantitySelector />
-          </div>
-
-          <div className="flex flex-col gap-2">
-            <Button>Add to cart</Button>
-            <Button variant="secondary">Buy now</Button>
-            <Text asLabel className="text-xs text-center">
-              Checkout powered by&nbsp;
-              <OpayLink />
-            </Text>
-          </div>
+          <ProductDetail product={product} />
 
           <div className="flex flex-col gap-2">
             <Text variant="h4">Description</Text>

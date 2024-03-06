@@ -1,5 +1,5 @@
 import api from "@/lib/axios";
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery } from "@tanstack/react-query";
 
 export const useGetStore = (storeId: string) => {
   const store = useQuery({
@@ -24,5 +24,58 @@ export const getStoreProducts = async (storeId: string) => {
 
 export const getStoreProductById = async (productId: string) => {
   const response = await api.get<APIResponse<ProductDetail>>(`/products/${productId}`);
+  return response.data;
+};
+
+export const useGetCart = () => {
+  const cart = useQuery({
+    queryKey: ["cart"],
+    queryFn: getCart,
+  });
+
+  return cart;
+};
+
+export const getCart = async () => {
+  const response = await api.get<APIResponse<Cart[]>>(`/users/cart`);
+  return response.data;
+};
+
+export const useAddToCart = () => {
+  const mutation = useMutation({
+    mutationFn: addToCart,
+  });
+
+  return mutation;
+};
+
+const addToCart = async (data: { productId: string; quantity: number }) => {
+  const response = await api.post<APIResponse<Cart>>(`/users/cart`, data);
+  return response.data;
+};
+
+export const useUpdateCart = () => {
+  const mutation = useMutation({
+    mutationFn: updateCart,
+  });
+
+  return mutation;
+};
+
+const updateCart = async (data: { id: string; quantity: number }) => {
+  const response = await api.patch<APIResponse<Cart>>(`/users/cart/${data.id}`, data);
+  return response.data;
+};
+
+export const useRemoveFromCart = () => {
+  const mutation = useMutation({
+    mutationFn: removeFromCart,
+  });
+
+  return mutation;
+};
+
+const removeFromCart = async (id: string) => {
+  const response = await api.delete<APIResponse<Cart>>(`/users/cart/${id}`);
   return response.data;
 };

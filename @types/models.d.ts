@@ -42,3 +42,17 @@ interface Product {
 interface ProductDetail extends Product {
   store: Store;
 }
+
+interface Cart {
+  id: string;
+  cartId: string;
+  productId: string;
+  title: string;
+  description: string;
+  imageUrl: string;
+  price: Money;
+  quantity: number;
+  outOfStock: boolean;
+  createdAt: string;
+  updatedAt: string;
+}

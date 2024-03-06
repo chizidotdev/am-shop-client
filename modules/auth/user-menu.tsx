@@ -16,6 +16,8 @@ import {
 } from "@/ui/dropdown-menu";
 import { useRouter } from "next/navigation";
 import { useSession } from "./session-context";
+import { Permissions } from "./permissions";
+import { ComingSoonBadge } from "@/common/coming-soon-badge";
 
 export function UserMenu() {
   const { data, logout } = useSession();
@@ -43,27 +45,30 @@ export function UserMenu() {
           <Text className="font-normal text-sm">{data.email}</Text>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuGroup>
-          <DropdownMenuSub>
-            <DropdownMenuSubTrigger>Dashboard</DropdownMenuSubTrigger>
-            <DropdownMenuPortal>
-              <DropdownMenuSubContent>
-                <DropdownMenuItem onClick={() => push("/dashboard")}>Store</DropdownMenuItem>
-                <DropdownMenuItem onClick={() => push("/dashboard/products")}>
-                  Product
-                </DropdownMenuItem>
-              </DropdownMenuSubContent>
-            </DropdownMenuPortal>
-          </DropdownMenuSub>
-          <DropdownMenuItem>
-            Settings
-            <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
+
+        <Permissions role="vendor">
+          <DropdownMenuGroup>
+            <DropdownMenuItem onClick={() => push("/dashboard")}>Dashboard</DropdownMenuItem>
+            <DropdownMenuItem onClick={() => push("/dashboard/settings")}>
+              Settings
+              {/* <DropdownMenuShortcut>⌘S</DropdownMenuShortcut> */}
+            </DropdownMenuItem>
+          </DropdownMenuGroup>
+          <DropdownMenuSeparator />
+          <DropdownMenuItem>Support</DropdownMenuItem>
+          <DropdownMenuItem disabled>API</DropdownMenuItem>
+          <DropdownMenuSeparator />
+        </Permissions>
+
+        <Permissions role="customer">
+          <DropdownMenuItem>Orders</DropdownMenuItem>
+          <DropdownMenuItem disabled>
+            Request Store &nbsp;
+            <ComingSoonBadge />
           </DropdownMenuItem>
-        </DropdownMenuGroup>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem>Support</DropdownMenuItem>
-        <DropdownMenuItem disabled>API</DropdownMenuItem>
-        <DropdownMenuSeparator />
+          <DropdownMenuSeparator />
+        </Permissions>
+
         <DropdownMenuItem onClick={logout}>
           Log out
           <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>

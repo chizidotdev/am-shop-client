@@ -3,14 +3,11 @@
 import React from "react";
 import { AppLogo } from "@/common/app-logo";
 import { cn } from "@/lib/utils";
-import { MdOutlineShoppingBag } from "react-icons/md";
-import { FaRegHeart } from "react-icons/fa";
 import { Button } from "@/ui/button";
 import { ScrollArea, ScrollBar } from "@/ui/scroll-area";
 import { DashboardSearch } from "./dashboard-search";
 import { redirect, usePathname } from "next/navigation";
 import Link from "next/link";
-import { UserMenu } from "@/modules/auth/user-menu";
 import { useSession } from "@/modules/auth/session-context";
 import { useDashboard } from "../context-store";
 import { RightNav } from "@/common/navbar/right-nav";
