@@ -6,11 +6,13 @@ import { formatCurrency } from "@/lib/utils";
 import { QuantitySelector } from "./quantity-selector";
 import { useState } from "react";
 import { useRemoveFromCart, useUpdateCart } from "./useStore";
+import { useCartContext } from "./cart-context";
 
 export const CartItem = (item: Cart) => {
+  const { refetch } = useCartContext();
   const [quantity, setQuantity] = useState(item.quantity);
-  const { mutate: removeItem, isPending: isRemoving } = useRemoveFromCart();
-  const { mutate: updateItem, isPending: isUpdating } = useUpdateCart();
+  const { mutate: removeItem, isPending: isRemoving } = useRemoveFromCart(refetch);
+  const { mutate: updateItem, isPending: isUpdating } = useUpdateCart(refetch);
 
   const increment = () => {
     if (isUpdating) return;

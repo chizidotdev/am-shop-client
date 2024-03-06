@@ -54,9 +54,10 @@ const addToCart = async (data: { productId: string; quantity: number }) => {
   return response.data;
 };
 
-export const useUpdateCart = () => {
+export const useUpdateCart = (cb: () => void) => {
   const mutation = useMutation({
     mutationFn: updateCart,
+    onSuccess: cb,
   });
 
   return mutation;
@@ -67,9 +68,10 @@ const updateCart = async (data: { id: string; quantity: number }) => {
   return response.data;
 };
 
-export const useRemoveFromCart = () => {
+export const useRemoveFromCart = (cb: () => void) => {
   const mutation = useMutation({
     mutationFn: removeFromCart,
+    onSuccess: cb,
   });
 
   return mutation;

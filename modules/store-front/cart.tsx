@@ -15,7 +15,7 @@ export function Cart({ closeCart }: { closeCart: () => void }) {
 function CartContent() {
   const { cartItems, isLoading, closeCart } = useCartContext();
 
-  const total = cartItems.reduce((acc, item) => acc + item.price, 0);
+  const total = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
   return (
     <div className="mb-10 flex flex-col">

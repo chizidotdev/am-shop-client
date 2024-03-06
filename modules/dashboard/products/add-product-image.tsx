@@ -25,15 +25,14 @@ export function AddProductImage({
         className="product-image-uploader"
         acceptedFileTypes={["image/*"]}
         name="files" /* sets the file input name, it's filepond by default */
-        labelIdle='Drag & Drop your image or <span class="filepond--label-action">Browse</span>'
+        labelIdle='Drag & Drop your images or <span class="filepond--label-action">Browse</span>'
         imagePreviewHeight={100}
-        maxFiles={1}
+        maxFiles={3}
         allowMultiple
         storeAsFile
       />
       <FormDescription>
-        {/* Can upload up to 3 images. The first image will be used as the primary image. */}
-        Choose a clear image that shows the product in the best light.
+        Can upload up to 3 images. The first image will be used as the primary image.
       </FormDescription>
     </FormItem>
   );

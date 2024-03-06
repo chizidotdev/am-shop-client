@@ -77,9 +77,9 @@
   }
 }
 
-/* .filepond--item { */
-/*   width: calc(33% - 0.5em); */
-/* } */
+.filepond--item {
+  width: calc(33% - 0.5em);
+}
 .filepond--root {
   @apply shadow-sm rounded-md;
 }

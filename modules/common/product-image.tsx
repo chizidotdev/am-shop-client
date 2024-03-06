@@ -13,7 +13,14 @@ export const ProductImage = ({
 }) => {
   return (
     <div className={cn("relative flex-1 overflow-hidden", className)}>
-      <Image src="/preview.png" objectFit="cover" className="rounded-lg" fill alt={product.title} />
+      <Image
+        src={product.images[0]?.url ?? "https://via.placeholder.com/300"}
+        // src={"/preview.webp"}
+        objectFit="cover"
+        className="rounded-lg"
+        fill
+        alt={product.title}
+      />
       {product.outOfStock && (
         <div
           className={cn(

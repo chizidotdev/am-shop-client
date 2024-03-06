@@ -5,6 +5,7 @@ type CartContextType = {
   cartItems: Cart[];
   isLoading: boolean;
   closeCart: () => void;
+  refetch: () => void;
 };
 
 export const CartContext = createContext({} as CartContextType);
@@ -16,11 +17,11 @@ export const CartContextProvider = ({
   children: React.ReactNode;
   closeCart: () => void;
 }) => {
-  const { data, isLoading } = useGetCart();
+  const { data, isLoading, refetch } = useGetCart();
   const cartItems = data?.data || [];
 
   return (
-    <CartContext.Provider value={{ cartItems, isLoading, closeCart }}>
+    <CartContext.Provider value={{ cartItems, isLoading, closeCart, refetch }}>
       {children}
     </CartContext.Provider>
   );
