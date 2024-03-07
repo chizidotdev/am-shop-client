@@ -11,6 +11,7 @@ import { ComingSoonBadge } from "@/common/coming-soon-badge";
 import { AddProduct } from "./add-product";
 import { useDashboard } from "../context-store";
 import { useGenerateFakeData } from "./useProducts";
+import { WhatsappImport } from "./whatsapp-import";
 
 export const OptionsMenu = () => {
   const { refetch, store } = useDashboard();
@@ -35,8 +36,7 @@ export const OptionsMenu = () => {
         <DropdownMenuContent>
           <DropdownMenuItem onClick={generateFakeData}>Generate Fake Data</DropdownMenuItem>
           <DropdownMenuItem disabled>
-            Import &nbsp;
-            <ComingSoonBadge />
+            <WhatsappImport />
           </DropdownMenuItem>
           <DropdownMenuItem disabled>
             Export &nbsp;

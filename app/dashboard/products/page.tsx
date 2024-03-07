@@ -13,6 +13,7 @@ import { DataTable } from "@/ui/data-table";
 import { dashboardProductColumns } from "@/modules/dashboard/products/table-columns";
 import { FilterOption, FilterOptions } from "@/modules/dashboard/products/filter-options";
 import { useDashboard } from "@/modules/dashboard/context-store";
+import { WhatsappImport } from "@/modules/dashboard/products/whatsapp-import";
 
 export default function DashboardProducts() {
   const [filter, setFilter] = React.useState<FilterOption>("all");
@@ -34,8 +35,7 @@ export default function DashboardProducts() {
             <Button>Add Product</Button>
           </AddProduct>
           <Button variant="secondary" disabled>
-            Import &nbsp;
-            <ComingSoonBadge />
+            <WhatsappImport />
           </Button>
         </div>
       </div>
