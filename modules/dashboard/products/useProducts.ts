@@ -1,6 +1,24 @@
 import api from "@/lib/axios";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
+export const useGenerateFakeData = (onSuccess: () => void) => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: generateFakeData,
+    onSuccess: (data) => {
+      if (!data.error) {
+        queryClient.invalidateQueries({ queryKey: ["products"] });
+        onSuccess();
+      }
+    },
+  });
+};
+
+const generateFakeData = async ({ storeId }: { storeId: string }) => {
+  const response = await api.post(`/stores/${storeId}/seed`);
+  return response.data;
+};
+
 export const useCreateProduct = (onSuccess: () => void) => {
   const queryClient = useQueryClient();
   return useMutation({

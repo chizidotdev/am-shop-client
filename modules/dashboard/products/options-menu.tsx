@@ -9,8 +9,19 @@ import { Button } from "@/ui/button";
 import { GoChevronDown } from "react-icons/go";
 import { ComingSoonBadge } from "@/common/coming-soon-badge";
 import { AddProduct } from "./add-product";
+import { useDashboard } from "../context-store";
+import { useGenerateFakeData } from "./useProducts";
 
 export const OptionsMenu = () => {
+  const { refetch, store } = useDashboard();
+  const { mutate, isPending } = useGenerateFakeData(refetch.products);
+
+  function generateFakeData() {
+    if (isPending || !store) return;
+
+    mutate({ storeId: store.id });
+  }
+
   return (
     <div className="flex items-center gap-2">
       {/* <Button variant="outline">Import</Button> */}
@@ -22,6 +33,7 @@ export const OptionsMenu = () => {
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent>
+          <DropdownMenuItem onClick={generateFakeData}>Generate Fake Data</DropdownMenuItem>
           <DropdownMenuItem disabled>
             Import &nbsp;
             <ComingSoonBadge />

@@ -32,7 +32,7 @@ export default async function StoreFrontProduct({
           <div className="relative aspect-square w-full sm:w-[70%] md:w-full self-center">
             <Image
               fill
-              src="/preview.webp"
+              src={product.images[0]?.url}
               alt={product.title}
               className="rounded-lg object-cover"
               priority

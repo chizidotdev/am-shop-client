@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { Button } from "@/ui/button";
@@ -10,6 +10,7 @@ import { Textarea } from "@/ui/textarea";
 import { AddProductImage } from "./add-product-image";
 import { useUpdateProduct } from "./useProducts";
 import { useDashboard } from "../context-store";
+import { FilePond } from "react-filepond";
 
 export const EditProductForm = ({
   callback,
@@ -21,7 +22,15 @@ export const EditProductForm = ({
   const { store } = useDashboard();
   const { mutate, isPending } = useUpdateProduct(callback);
 
+  const imageRef = useRef<FilePond>(null);
   const [images, setImages] = useState<File[]>([]);
+  useEffect(() => {
+    const imageUrl = product.images[0]?.url;
+    if (imageUrl && imageRef.current) {
+      // imageRef.current.addFile(imageUrl);
+    }
+  }, [product]);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -83,7 +92,7 @@ export const EditProductForm = ({
           )}
         />
 
-        <AddProductImage files={images} setFiles={setImages} />
+        <AddProductImage ref={imageRef} files={images} setFiles={setImages} />
 
         <FormField
           control={form.control}
