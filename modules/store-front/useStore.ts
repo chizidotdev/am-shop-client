@@ -1,5 +1,6 @@
 import api from "@/lib/axios";
 import { useMutation, useQuery } from "@tanstack/react-query";
+import { toast } from "sonner";
 
 export const useGetStore = (storeId: string) => {
   const store = useQuery({
@@ -44,6 +45,11 @@ export const getCart = async () => {
 export const useAddToCart = () => {
   const mutation = useMutation({
     mutationFn: addToCart,
+    onSuccess: (data) => {
+      if (!data.error) {
+        toast.success(data.message);
+      }
+    },
   });
 
   return mutation;
@@ -57,7 +63,12 @@ const addToCart = async (data: { productId: string; quantity: number }) => {
 export const useUpdateCart = (cb: () => void) => {
   const mutation = useMutation({
     mutationFn: updateCart,
-    onSuccess: cb,
+    onSuccess: (data) => {
+      if (!data.error) {
+        toast.success(data.message);
+        cb();
+      }
+    },
   });
 
   return mutation;
@@ -71,7 +82,12 @@ const updateCart = async (data: { id: string; quantity: number }) => {
 export const useRemoveFromCart = (cb: () => void) => {
   const mutation = useMutation({
     mutationFn: removeFromCart,
-    onSuccess: cb,
+    onSuccess: (data) => {
+      if (!data.error) {
+        toast.success(data.message);
+        cb();
+      }
+    },
   });
 
   return mutation;
@@ -79,5 +95,18 @@ export const useRemoveFromCart = (cb: () => void) => {
 
 const removeFromCart = async (id: string) => {
   const response = await api.delete<APIResponse<Cart>>(`/users/cart/${id}`);
+  return response.data;
+};
+
+export const useSearchStores = () => {
+  const stores = useMutation({
+    mutationFn: searchStores,
+  });
+
+  return stores;
+};
+
+const searchStores = async (query: string) => {
+  const response = await api.post<APIResponse<Store[]>>(`/stores/search`, { query });
   return response.data;
 };

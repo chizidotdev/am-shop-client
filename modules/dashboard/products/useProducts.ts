@@ -1,5 +1,6 @@
 import api from "@/lib/axios";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { toast } from "sonner";
 
 export const useGenerateFakeData = (onSuccess: () => void) => {
   const queryClient = useQueryClient();
@@ -7,6 +8,7 @@ export const useGenerateFakeData = (onSuccess: () => void) => {
     mutationFn: generateFakeData,
     onSuccess: (data) => {
       if (!data.error) {
+        toast.success(data.message);
         queryClient.invalidateQueries({ queryKey: ["products"] });
         onSuccess();
       }
@@ -25,6 +27,7 @@ export const useCreateProduct = (onSuccess: () => void) => {
     mutationFn: createProduct,
     onSuccess: (data) => {
       if (!data.error) {
+        toast.success(data.message);
         queryClient.invalidateQueries({ queryKey: ["products"] });
         onSuccess();
       }
@@ -59,14 +62,23 @@ export const useDeleteProduct = (onSuccess: () => void) => {
   const queryClient = useQueryClient();
   return useMutation({
     mutationFn: deleteProduct,
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["products"] });
-      onSuccess();
+    onSuccess: (data) => {
+      if (!data.error) {
+        toast.success(data.message);
+        queryClient.invalidateQueries({ queryKey: ["products"] });
+        onSuccess();
+      }
     },
   });
 };
 
-const deleteProduct = async ({ id, storeId }: { id: string; storeId: string }) => {
+const deleteProduct = async ({
+  id,
+  storeId,
+}: {
+  id: string;
+  storeId: string;
+}): Promise<APIResponse<Product>> => {
   const response = await api.delete(`stores/${storeId}/products/${id}`);
   return response.data;
 };
@@ -75,9 +87,12 @@ export const useUpdateProduct = (onSuccess?: () => void) => {
   const queryClient = useQueryClient();
   return useMutation({
     mutationFn: updateProduct,
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["products"] });
-      onSuccess && onSuccess();
+    onSuccess: (data) => {
+      if (!data.error) {
+        toast.success(data.message);
+        queryClient.invalidateQueries({ queryKey: ["products"] });
+        onSuccess && onSuccess();
+      }
     },
   });
 };
@@ -90,7 +105,7 @@ const updateProduct = async ({
   id: string;
   storeId: string;
   data: Partial<Product>;
-}) => {
+}): Promise<APIResponse<Product>> => {
   const response = await api.patch(`stores/${storeId}/products/${id}`, data);
   return response.data;
 };

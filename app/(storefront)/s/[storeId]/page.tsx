@@ -25,7 +25,7 @@ export default async function Home({ params: { storeId } }: { params: { storeId:
         <div className="flex gap-3 w-full">
           <div className="flex-1 flex gap-3 items-center">
             <Avatar className="rounded-lg">
-              <AvatarImage src="/preview-pp.webp" alt={store.name} />
+              <AvatarImage src="" alt={store.name} />
               <AvatarFallback>{store.name.charAt(0).toUpperCase()}</AvatarFallback>
             </Avatar>
             <Text variant="h3">{store.name}</Text>

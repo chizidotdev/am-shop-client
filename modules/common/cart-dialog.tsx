@@ -6,6 +6,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/ui
 import { Drawer, DrawerContent, DrawerHeader, DrawerTitle, DrawerTrigger } from "@/ui/drawer";
 import { useMediaQuery } from "@/common/hooks/useMediaQuery";
 import { Cart } from "@/modules/store-front/cart";
+import { Permissions } from "@/modules/auth/permissions";
 import { useState } from "react";
 
 export function CartDialog() {
@@ -19,11 +20,13 @@ export function CartDialog() {
   if (isDesktop) {
     return (
       <Sheet open={open} onOpenChange={setOpen}>
-        <SheetTrigger asChild>
-          <Button variant="ghost" className="rounded-full h-10 w-10 p-2">
-            <MdOutlineShoppingBag size={20} />
-          </Button>
-        </SheetTrigger>
+        <Permissions role="authenticated">
+          <SheetTrigger asChild>
+            <Button variant="ghost" className="rounded-full h-10 w-10 p-2">
+              <MdOutlineShoppingBag size={20} />
+            </Button>
+          </SheetTrigger>
+        </Permissions>
         <SheetContent>
           <SheetHeader>
             <SheetTitle>{cartConstants.title}</SheetTitle>
@@ -35,11 +38,13 @@ export function CartDialog() {
   }
   return (
     <Drawer open={open} onOpenChange={setOpen}>
-      <DrawerTrigger>
-        <Button variant="ghost" className="rounded-full h-10 w-10 p-2">
-          <MdOutlineShoppingBag size={20} />
-        </Button>
-      </DrawerTrigger>
+      <Permissions role="authenticated">
+        <DrawerTrigger>
+          <Button variant="ghost" className="rounded-full h-10 w-10 p-2">
+            <MdOutlineShoppingBag size={20} />
+          </Button>
+        </DrawerTrigger>
+      </Permissions>
       <DrawerContent>
         <DrawerHeader>
           <DrawerTitle>{cartConstants.title}</DrawerTitle>

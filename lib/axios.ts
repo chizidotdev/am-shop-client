@@ -37,7 +37,6 @@ export const createAxiosClient = ({ options }: AxiosClient) => {
       return response;
     }
 
-    toast.success(response.data.message);
     return response;
   });
 
