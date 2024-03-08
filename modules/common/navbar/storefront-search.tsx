@@ -46,10 +46,14 @@ export const StorefrontSearch = ({ className }: { className?: string }) => {
         </div>
 
         <Input
-          className="w-full rounded-none border-none shadow-none focus-visible:ring-0 py-5"
           icon={<MagnifyingGlassIcon className="h-4 w-4" />}
+          className="w-full rounded-none border-none shadow-none focus-visible:ring-0 py-5"
           placeholder="Search for stores"
           onChange={onChange}
+          autoCorrect="off"
+          autoCapitalize="off"
+          spellCheck="false"
+          autoComplete="off"
         />
       </div>
     </div>
