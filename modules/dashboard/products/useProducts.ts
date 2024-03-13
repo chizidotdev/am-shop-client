@@ -16,8 +16,8 @@ export const useGenerateFakeData = (onSuccess: () => void) => {
   });
 };
 
-const generateFakeData = async ({ storeId }: { storeId: string }) => {
-  const response = await api.post(`/stores/${storeId}/seed`);
+const generateFakeData = async () => {
+  const response = await api.post(`/vendor/products/seed`);
   return response.data;
 };
 
@@ -35,8 +35,8 @@ export const useCreateProduct = (onSuccess: () => void) => {
   });
 };
 
-const createProduct = async ({ storeId, data }: { storeId: string; data: FormData }) => {
-  const response = await api.post(`/stores/${storeId}/products`, data, {
+const createProduct = async ({ data }: { data: FormData }) => {
+  const response = await api.post(`/vendor/products`, data, {
     headers: { "Content-Type": "multipart/form-data" },
   });
   return response.data;
@@ -45,16 +45,13 @@ const createProduct = async ({ storeId, data }: { storeId: string; data: FormDat
 export const useGetProducts = (store: Store | null) => {
   return useQuery({
     queryKey: ["products"],
-    queryFn: () => getProducts(store?.id),
+    queryFn: () => getProducts(),
     enabled: !!store?.id,
   });
 };
 
-const getProducts = async (
-  storeId: string | undefined,
-): Promise<APIResponse<Product[]> | undefined> => {
-  if (!storeId) return;
-  const response = await api.get(`/stores/${storeId}/products`);
+const getProducts = async (): Promise<APIResponse<Product[]> | undefined> => {
+  const response = await api.get(`/vendor/products`);
   return response.data;
 };
 
@@ -72,14 +69,8 @@ export const useDeleteProduct = (onSuccess: () => void) => {
   });
 };
 
-const deleteProduct = async ({
-  id,
-  storeId,
-}: {
-  id: string;
-  storeId: string;
-}): Promise<APIResponse<Product>> => {
-  const response = await api.delete(`stores/${storeId}/products/${id}`);
+const deleteProduct = async ({ id }: { id: string }): Promise<APIResponse<Product>> => {
+  const response = await api.delete(`/vendor/products/${id}`);
   return response.data;
 };
 
@@ -99,13 +90,11 @@ export const useUpdateProduct = (onSuccess?: () => void) => {
 
 const updateProduct = async ({
   id,
-  storeId,
   data,
 }: {
   id: string;
-  storeId: string;
   data: Partial<Product>;
 }): Promise<APIResponse<Product>> => {
-  const response = await api.patch(`stores/${storeId}/products/${id}`, data);
+  const response = await api.patch(`vendor/products/${id}`, data);
   return response.data;
 };

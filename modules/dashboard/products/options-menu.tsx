@@ -20,7 +20,7 @@ export const OptionsMenu = () => {
   function generateFakeData() {
     if (isPending || !store) return;
 
-    mutate({ storeId: store.id });
+    mutate();
   }
 
   return (

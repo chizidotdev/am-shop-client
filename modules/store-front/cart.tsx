@@ -3,6 +3,7 @@ import { Text } from "@/ui/text";
 import { formatCurrency } from "@/lib/utils";
 import { CartItem } from "./cart-item";
 import { CartContextProvider, useCartContext } from "./cart-context";
+import { useCheckout } from "./useStore";
 
 export function Cart({ closeCart }: { closeCart: () => void }) {
   return (
@@ -14,8 +15,12 @@ export function Cart({ closeCart }: { closeCart: () => void }) {
 
 function CartContent() {
   const { cartItems, isLoading, closeCart } = useCartContext();
-
   const total = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+
+  const { mutate } = useCheckout(closeCart);
+  function handleCheckout() {
+    mutate();
+  }
 
   return (
     <div className="mb-10 flex flex-col">
@@ -46,7 +51,7 @@ function CartContent() {
         <Text variant="h4">{formatCurrency(total)}</Text>
       </div>
 
-      <Button className="self-end" disabled={!cartItems.length} onClick={closeCart}>
+      <Button className="self-end" disabled={!cartItems.length} onClick={handleCheckout}>
         Checkout
       </Button>
     </div>

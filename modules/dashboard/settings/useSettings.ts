@@ -3,7 +3,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useDashboard } from "../context-store";
 import { toast } from "sonner";
 
-const USER_STORE_QUERY_KEY = "user-store";
+const USER_STORE_QUERY_KEY = "vendor-store";
 
 export const useUpdateStore = () => {
   const { invalidateQueries } = useQueryClient();
@@ -26,7 +26,7 @@ const updateStore = async (data: {
   name: string;
   description: string;
 }): Promise<APIResponse<Store>> => {
-  const response = await api.put<APIResponse<any>>("/users/store", data);
+  const response = await api.put<APIResponse<any>>("/vendor/stores", data);
   return response.data;
 };
 
@@ -51,7 +51,7 @@ const createStore = async (data: {
   name: string;
   description: string;
 }): Promise<APIResponse<Store>> => {
-  const response = await api.post<APIResponse<Store>>("/users/store", data);
+  const response = await api.post<APIResponse<Store>>("/vendor/stores", data);
   return response.data;
 };
 
@@ -61,6 +61,6 @@ export const useGetUserStore = () => {
 };
 
 const getUserStore = async () => {
-  const response = await api.get<APIResponse<Store>>("users/store");
+  const response = await api.get<APIResponse<Store>>("vendor/stores");
   return response.data;
 };

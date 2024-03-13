@@ -55,7 +55,7 @@
     --success: 150.1 76.2% 36.3%;
     --success-foreground: 210 40% 98%;
     --warning: 48 96% 89%;
-    --warning-foreground: 38 92% 50%;
+    --warning-foreground: 38 92% 30%;
   }
 }
 
@@ -94,3 +94,10 @@
 .filepond--root {
   font-family: inherit !important;
 }
+
+/* 
+* 379392
+* EFA00B
+* ED254E
+* EF8354
+* */

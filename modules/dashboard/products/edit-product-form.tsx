@@ -44,7 +44,7 @@ export const EditProductForm = ({
   function onSubmit(values: z.infer<typeof formSchema>) {
     if (!store) return;
 
-    mutate({ id: product.id, storeId: store.id, data: values });
+    mutate({ id: product.id, data: values });
   }
 
   return (

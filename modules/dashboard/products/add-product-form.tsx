@@ -35,7 +35,7 @@ export const AddProductForm = ({ callback }: { callback: () => void }) => {
       formData.append(key, (values as any)[key]);
     }
 
-    mutate({ storeId: store.id, data: formData });
+    mutate({ data: formData });
   }
 
   return (

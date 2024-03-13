@@ -38,7 +38,7 @@ export const useGetCart = () => {
 };
 
 export const getCart = async () => {
-  const response = await api.get<APIResponse<Cart[]>>(`/users/cart`);
+  const response = await api.get<APIResponse<Cart[]>>(`/cart`);
   return response.data;
 };
 
@@ -56,7 +56,7 @@ export const useAddToCart = () => {
 };
 
 const addToCart = async (data: { productId: string; quantity: number }) => {
-  const response = await api.post<APIResponse<Cart>>(`/users/cart`, data);
+  const response = await api.post<APIResponse<Cart>>(`/cart`, data);
   return response.data;
 };
 
@@ -75,7 +75,7 @@ export const useUpdateCart = (cb: () => void) => {
 };
 
 const updateCart = async (data: { id: string; quantity: number }) => {
-  const response = await api.patch<APIResponse<Cart>>(`/users/cart/${data.id}`, data);
+  const response = await api.patch<APIResponse<Cart>>(`/cart/${data.id}`, data);
   return response.data;
 };
 
@@ -94,7 +94,26 @@ export const useRemoveFromCart = (cb: () => void) => {
 };
 
 const removeFromCart = async (id: string) => {
-  const response = await api.delete<APIResponse<Cart>>(`/users/cart/${id}`);
+  const response = await api.delete<APIResponse<Cart>>(`/cart/${id}`);
+  return response.data;
+};
+
+export const useCheckout = (cb: () => void) => {
+  const mutation = useMutation({
+    mutationFn: checkout,
+    onSuccess: (data) => {
+      if (!data.error) {
+        toast.success(data.message);
+        cb();
+      }
+    },
+  });
+
+  return mutation;
+};
+
+const checkout = async () => {
+  const response = await api.post<APIResponse<Cart>>(`/orders`);
   return response.data;
 };
 

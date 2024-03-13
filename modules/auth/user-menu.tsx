@@ -6,12 +6,8 @@ import {
   DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuLabel,
-  DropdownMenuPortal,
   DropdownMenuSeparator,
   DropdownMenuShortcut,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@/ui/dropdown-menu";
 import { useRouter } from "next/navigation";
@@ -57,11 +53,12 @@ export function UserMenu() {
           <DropdownMenuSeparator />
           <DropdownMenuItem>Support</DropdownMenuItem>
           <DropdownMenuItem disabled>API</DropdownMenuItem>
-          <DropdownMenuSeparator />
         </Permissions>
 
+        <DropdownMenuItem>Orders</DropdownMenuItem>
+
+        <DropdownMenuSeparator />
         <Permissions role="customer">
-          <DropdownMenuItem>Orders</DropdownMenuItem>
           <DropdownMenuItem disabled>
             Request Store &nbsp;
             <ComingSoonBadge />
