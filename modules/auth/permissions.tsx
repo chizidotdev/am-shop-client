@@ -2,14 +2,17 @@ import React from "react";
 import { useSession } from "./session-context";
 import { Login } from "./login";
 
-export const Permissions = ({
-  children,
-  role,
-}: {
+type Role = User["role"] | "authenticated";
+type PermissionsProps = {
   children: React.ReactNode;
-  role: User["role"] | "authenticated";
-}) => {
+  role: Role;
+};
+export const Permissions = ({ children, role }: PermissionsProps) => {
   const { status, data } = useSession();
+
+  if (data?.role === "master") {
+    return children;
+  }
 
   if (role === "authenticated" && status !== "authenticated") {
     return <Login>{children}</Login>;
@@ -19,11 +22,7 @@ export const Permissions = ({
     return children;
   }
 
-  if (status === "unauthenticated" || status === "loading" || !data) {
-    return null;
-  }
-
-  if (data.role !== role) {
+  if (status === "unauthenticated" || status === "loading" || !data || data.role !== role) {
     return null;
   }
 

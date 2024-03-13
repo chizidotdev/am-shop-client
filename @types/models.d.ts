@@ -67,6 +67,10 @@ interface Order {
   shippingAddress: string;
   createdAt: string;
   updatedAt: string;
+  orderItems: CustomerOrderItem[];
+}
+interface CustomerOrderItem extends OrderItem {
+  productTitle: string;
 }
 
 type OrderStatus = "pending" | "processing" | "shipped" | "delivered" | "cancelled";

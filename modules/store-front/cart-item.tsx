@@ -5,7 +5,7 @@ import { HiXMark } from "react-icons/hi2";
 import { formatCurrency } from "@/lib/utils";
 import { QuantitySelector } from "./quantity-selector";
 import { useState } from "react";
-import { useRemoveFromCart, useUpdateCart } from "./useStore";
+import { useRemoveFromCart, useUpdateCart } from "./useCart";
 import { useCartContext } from "./cart-context";
 
 export const CartItem = (item: Cart) => {

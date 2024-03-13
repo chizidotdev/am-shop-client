@@ -40,7 +40,7 @@ export default async function StoreFrontProduct({
           </div>
         </div>
 
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-8 mb-10">
           <div>
             <Link href={`/s/${product.store.id}`} className="flex items-center gap-2 w-min">
               <Avatar className="rounded-lg">

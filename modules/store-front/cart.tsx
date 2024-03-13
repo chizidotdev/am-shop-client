@@ -3,7 +3,7 @@ import { Text } from "@/ui/text";
 import { formatCurrency } from "@/lib/utils";
 import { CartItem } from "./cart-item";
 import { CartContextProvider, useCartContext } from "./cart-context";
-import { useCheckout } from "./useStore";
+import { useCheckout } from "./useCart";
 
 export function Cart({ closeCart }: { closeCart: () => void }) {
   return (

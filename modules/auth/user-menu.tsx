@@ -55,7 +55,7 @@ export function UserMenu() {
           <DropdownMenuItem disabled>API</DropdownMenuItem>
         </Permissions>
 
-        <DropdownMenuItem>Orders</DropdownMenuItem>
+        <DropdownMenuItem onClick={() => push("/orders")}>Orders</DropdownMenuItem>
 
         <DropdownMenuSeparator />
         <Permissions role="customer">

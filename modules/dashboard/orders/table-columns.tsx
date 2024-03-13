@@ -7,6 +7,7 @@ import { Badge, BadgeProps } from "@/ui/badge";
 import { Checkbox } from "@/ui/checkbox";
 import { CaretSortIcon } from "@radix-ui/react-icons";
 import { ColumnDef } from "@tanstack/react-table";
+import { OrderStatusBadge, PaymentStatusBadge } from "@/common/status-badge";
 
 export const dashboardOrderColumns: ColumnDef<VendorOrder>[] = [
   {
@@ -78,23 +79,9 @@ export const dashboardOrderColumns: ColumnDef<VendorOrder>[] = [
     cell: ({ row }) => {
       const status: OrderStatus = row.getValue("status");
 
-      let variant: BadgeProps["variant"] = "outline";
-      if (status === "processing") {
-        variant = "warning";
-      }
-      if (status === "delivered") {
-        variant = "success";
-      }
-      if (status === "cancelled") {
-        variant = "destructive";
-      }
-      if (status === "shipped") {
-        variant = "default";
-      }
-
       return (
         <div className="min-w-24">
-          <Badge variant={variant}>{status}</Badge>
+          <OrderStatusBadge status={status} />
         </div>
       );
     },
@@ -104,24 +91,9 @@ export const dashboardOrderColumns: ColumnDef<VendorOrder>[] = [
     header: "Payment",
     cell: ({ row }) => {
       const status: PaymentStatus = row.getValue("paymentStatus");
-
-      let variant: BadgeProps["variant"] = "outline";
-      if (status === "pending") {
-        variant = "warning";
-      }
-      if (status === "paid") {
-        variant = "success";
-      }
-      if (status === "failed") {
-        variant = "destructive";
-      }
-      if (status === "refunded") {
-        variant = "default";
-      }
-
       return (
         <div className="min-w-24">
-          <Badge variant={variant}>{status}</Badge>
+          <PaymentStatusBadge status={status} />
         </div>
       );
     },

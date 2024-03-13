@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/ui/button";
 import React from "react";
-import { useAddToCart } from "./useStore";
+import { useAddToCart } from "./useCart";
 import { Permissions } from "../auth/permissions";
 
 export const AddToCart = ({ product, quantity }: { product: Product; quantity: number }) => {
