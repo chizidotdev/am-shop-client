@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeToggle } from "@/modules/common/theme-toggle";
 import { cn } from "@/lib/utils";
 import { Providers } from "./providers";
+import Script from "next/script";
 
 const font = Font({ subsets: ["latin"] });
 
@@ -24,6 +25,8 @@ export default function RootLayout({
           <div>{children}</div>
           <ThemeToggle />
         </Providers>
+
+        <Script src="/service-worker.js" />
       </body>
     </html>
   );
