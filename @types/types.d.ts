@@ -11,3 +11,13 @@ interface ErrorResponse {
   code: number;
   reason: string;
 }
+
+type PaystackResponse = {
+  message: string;
+  redirecturl: string;
+  reference: string;
+  status: "success" | "failed";
+  trans: string;
+  transaction: string;
+  trxref: string;
+};

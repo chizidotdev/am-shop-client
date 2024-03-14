@@ -56,15 +56,17 @@ export default async function StoreFrontProduct({
 
           <ProductDetail product={product} />
 
-          <div className="flex flex-col gap-2">
-            <Text variant="h4">Description</Text>
-            <Text>{product.description}</Text>
-            {/* <Text */}
-            {/*   className="text-sm *:list-disc *:list-inside line-clamp-6" */}
-            {/*   dangerouslySetInnerHTML={{ __html: descriptionHtml }} */}
-            {/* /> */}
-            {/* <Button variant="link">Read more</Button> */}
-          </div>
+          {!!product.description && (
+            <div className="flex flex-col gap-2">
+              <Text variant="h4">Description</Text>
+              <Text>{product.description}</Text>
+              {/* <Text */}
+              {/*   className="text-sm *:list-disc *:list-inside line-clamp-6" */}
+              {/*   dangerouslySetInnerHTML={{ __html: descriptionHtml }} */}
+              {/* /> */}
+              {/* <Button variant="link">Read more</Button> */}
+            </div>
+          )}
         </div>
       </div>
     </div>

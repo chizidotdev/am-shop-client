@@ -4,6 +4,10 @@ import { formatCurrency } from "@/lib/utils";
 import { CartItem } from "./cart-item";
 import { CartContextProvider, useCartContext } from "./cart-context";
 import { useCheckout } from "./useCart";
+import { usePaystackPayment } from "react-paystack";
+import { useSession } from "../auth/session-context";
+import { toast } from "sonner";
+import { PAYSTACK_KEY } from "@/lib/constants";
 
 export function Cart({ closeCart }: { closeCart: () => void }) {
   return (
@@ -14,12 +18,27 @@ export function Cart({ closeCart }: { closeCart: () => void }) {
 }
 
 function CartContent() {
+  const { data } = useSession();
   const { cartItems, isLoading, closeCart } = useCartContext();
   const total = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
+  if (!data) return null;
+  const initPayment = usePaystackPayment({
+    reference: new Date().getTime().toString(),
+    email: data?.email,
+    amount: parseInt(total.toString()) * 100,
+    publicKey: PAYSTACK_KEY,
+  });
+
   const { mutate } = useCheckout(closeCart);
   function handleCheckout() {
-    mutate();
+    console.log("checking out");
+    initPayment({
+      onSuccess: (resp: PaystackResponse) => {
+        if (resp.status === "success") mutate();
+      },
+      onClose: () => toast.info("Payment was cancelled"),
+    });
   }
 
   return (

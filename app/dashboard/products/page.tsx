@@ -48,7 +48,7 @@ export default function DashboardProducts() {
         {view === "grid" ? (
           <DashboardProductGrid products={products} />
         ) : (
-          <DataTable data={products} columns={dashboardProductColumns} />
+          <DataTable data={products} columns={dashboardProductColumns} filterKey="title" />
         )}
       </>
     );
