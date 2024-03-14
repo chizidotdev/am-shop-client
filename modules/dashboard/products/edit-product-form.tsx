@@ -25,10 +25,15 @@ export const EditProductForm = ({
   const imageRef = useRef<FilePond>(null);
   const [images, setImages] = useState<File[]>([]);
   useEffect(() => {
-    const imageUrl = product.images[0]?.url;
-    if (imageUrl && imageRef.current) {
-      // imageRef.current.addFile(imageUrl);
+    async function addInitialImages() {
+      if (imageRef.current) {
+        for (const img of product.images) {
+          imageRef.current.addFile(img.url);
+        }
+      }
     }
+
+    addInitialImages();
   }, [product]);
 
   const form = useForm<z.infer<typeof formSchema>>({
