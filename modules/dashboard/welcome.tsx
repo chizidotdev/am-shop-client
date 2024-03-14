@@ -2,10 +2,15 @@
 import React from "react";
 import { Text } from "@/ui/text";
 import { useSession } from "../auth/session-context";
+import { Skeleton } from "@/ui/skeleton";
 
 export const Welcome = () => {
-  const { data } = useSession();
+  const { data, status } = useSession();
   const greeting = getGreeting();
+
+  if (status === "loading") {
+    return <Skeleton className="w-96 h-8" />;
+  }
 
   return (
     <div>

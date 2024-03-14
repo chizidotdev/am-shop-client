@@ -37,7 +37,6 @@ export const ProductActions = ({ product }: { product: Product }) => {
 
     updateProductMutation({
       id: product.id,
-      storeId: store.id,
       data: { outOfStock: !product.outOfStock },
     });
   };
@@ -45,7 +44,7 @@ export const ProductActions = ({ product }: { product: Product }) => {
   const deleteProduct = () => {
     if (!store?.id) return;
 
-    deleteProductMutation({ id: product.id, storeId: store?.id });
+    deleteProductMutation({ id: product.id });
   };
 
   const copyProductLink = async () => {

@@ -8,7 +8,11 @@ import { formatCurrency, formatDate } from "@/lib/utils";
 import { OrderStatusBadge, PaymentStatusBadge } from "@/common/status-badge";
 
 export default function Orders() {
-  const { data } = useGetOrders();
+  const { data, isLoading } = useGetOrders();
+
+  // if (isLoading) {
+
+  // }
 
   const orders = data?.data;
 

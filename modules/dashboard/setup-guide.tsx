@@ -8,13 +8,14 @@ import { Button, buttonVariants } from "@/ui/button";
 import Link from "next/link";
 import { OpayLink } from "@/common/opay-link";
 import { useDashboard } from "./context-store";
+import { Skeleton } from "@/ui/skeleton";
 
 export const SetupGuide = () => {
   const { isFetchingStore, isFetchingProducts } = useDashboard();
   const { setupOptions, nextItemIdx } = useSetupOptions();
 
   if (isFetchingStore || isFetchingProducts) {
-    return null;
+    return <Skeleton className="w-full max-w-2xl h-80" />;
   }
 
   return (

@@ -6,6 +6,7 @@ import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { ProductPrice } from "./product-price";
 import Link from "next/link";
 import { ProductImage } from "@/common/product-image";
+import { Skeleton } from "@/ui/skeleton";
 
 export const ProductCard = ({ product }: { product: Product }) => {
   const [liked, setLiked] = React.useState(false);
@@ -56,6 +57,18 @@ export const ProductCard = ({ product }: { product: Product }) => {
           <ProductPrice price={price} />
         </div>
       </Link>
+    </div>
+  );
+};
+
+export const ProductCardSkeleton = () => {
+  return (
+    <div className="text-card-foreground ">
+      <Skeleton className="aspect-square" />
+      <div className="mt-2 space-y-2">
+        <Skeleton className="h-4 w-3/4" />
+        <Skeleton className="h-4 w-1/2" />
+      </div>
     </div>
   );
 };

@@ -8,7 +8,7 @@ import { ComingSoonBadge } from "@/common/coming-soon-badge";
 export default function DashboardSettings() {
   return (
     <div className="flex flex-col gap-6">
-      <div className="flex flex-col gap-2 border-b pb-4">
+      <div className="flex flex-col gap-2">
         <Text variant="h1">Settings</Text>
         <Text>Manage your store settings and set account preferences.</Text>
       </div>

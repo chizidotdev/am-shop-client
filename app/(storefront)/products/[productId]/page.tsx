@@ -7,6 +7,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/ui/avatar";
 import { LikeButton } from "@/modules/store-front/like-button";
 import { getStoreProductById } from "@/modules/store-front/useStore";
 import { ProductDetail } from "./product-detail";
+import { notFound } from "next/navigation";
 
 export default async function StoreFrontProduct({
   params: { productId },
@@ -15,15 +16,11 @@ export default async function StoreFrontProduct({
 }) {
   const productData = await getStoreProductById(productId as string);
 
-  if (!productData) {
-    return null;
+  if (!productData || !productData.data) {
+    notFound();
   }
 
-  const { data: product } = productData;
-
-  if (!product) {
-    return null;
-  }
+  const product = productData.data;
 
   return (
     <div className="flex flex-col gap-4">
