@@ -90,7 +90,7 @@ export default function DashboardProducts() {
           </div>
         </CardHeader>
         <CardContent className="border-t p-3 sm:p-6">{body}</CardContent>
-        <CardFooter className="bg-background-dashboard flex-col items-start pt-6">
+        <CardFooter className="bg-secondary flex-col items-start pt-6">
           <Text variant="h3">Connect to a vendor</Text>
           <Text>Connect to a vendor to import products from your vendor to your store.</Text>
 

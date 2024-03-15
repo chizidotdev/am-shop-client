@@ -56,7 +56,7 @@ export function DashboardNav() {
         </div>
       </div>
 
-      <div className="bg-background-dashboard border-b">
+      <div className="bg-secondary border-b">
         <div className="max-w-7xl mx-auto px-5">
           <ScrollArea>
             <div className="flex items-center gap-3 md:gap-5">
@@ -68,7 +68,7 @@ export function DashboardNav() {
                     key={`${href}${label}`}
                     href={href}
                     className={cn(
-                      "text-sm font-medium transition-colors border-b-2 border-background-dashboard text-muted-foreground",
+                      "text-sm font-medium transition-colors border-b-2 border-secondary text-muted-foreground",
                       "flex items-center h-12 sm:h-14 px-3",
                       isActive && "text-foreground border-b-2 border-primary",
                       "hover:text-foreground hover:border-primary",

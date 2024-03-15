@@ -22,7 +22,7 @@ function CartContent() {
   const { cartItems, isLoading, closeCart } = useCartContext();
   const total = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
-  if (!data) return null;
+  const { mutate } = useCheckout(closeCart);
   const initPayment = usePaystackPayment({
     reference: new Date().getTime().toString(),
     email: data?.email,
@@ -30,15 +30,19 @@ function CartContent() {
     publicKey: PAYSTACK_KEY,
   });
 
-  const { mutate } = useCheckout(closeCart);
   function handleCheckout() {
-    console.log("checking out");
-    initPayment({
-      onSuccess: (resp: PaystackResponse) => {
-        if (resp.status === "success") mutate();
-      },
-      onClose: () => toast.info("Payment was cancelled"),
-    });
+    if (!data) return;
+
+    try {
+      initPayment({
+        onSuccess: (resp: PaystackResponse) => {
+          if (resp.status === "success") mutate();
+        },
+        onClose: () => toast.info("Payment was cancelled"),
+      });
+    } catch (err) {
+      toast.error("Error loading payment screen");
+    }
   }
 
   return (
