@@ -12,7 +12,6 @@ import { Text } from "@/ui/text";
 import { ToggleGroupItem } from "@/ui/toggle-group";
 import { useMediaQuery } from "@/common/hooks/useMediaQuery";
 
-export type FilterOption = (typeof filterOptions)[number]["value"];
 const filterOptions = [
   { label: "All", value: "all", disabled: false },
   { label: "In Stock", value: "inStock", disabled: false },
@@ -24,8 +23,8 @@ export const FilterOptions = ({
   filter,
   setFilter,
 }: {
-  filter: FilterOption;
-  setFilter: (value: FilterOption) => void;
+  filter: ProductFilterOption;
+  setFilter: (value: ProductFilterOption) => void;
 }) => {
   const mq = useMediaQuery("(min-width: 768px)");
 
@@ -33,7 +32,11 @@ export const FilterOptions = ({
     return (
       <>
         {filterOptions.map((option) => (
-          <ToggleGroupItem value={option.value} disabled={option.disabled}>
+          <ToggleGroupItem
+            value={option.value}
+            disabled={option.disabled}
+            onClick={() => setFilter(option.value)}
+          >
             <Text className="text-xs">{option.label}</Text>
           </ToggleGroupItem>
         ))}

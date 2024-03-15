@@ -2,8 +2,7 @@ import React from "react";
 import { Text } from "@/ui/text";
 import { ToggleGroupItem } from "@/ui/toggle-group";
 
-export type FilterOption = "fulfilled" | "pending" | "all";
-const filterOptions: readonly { value: FilterOption; disabled: boolean }[] = [
+const filterOptions: readonly { value: OrderFilterOption; disabled: boolean }[] = [
   { value: "all", disabled: false },
   { value: "pending", disabled: false },
   { value: "fulfilled", disabled: false },

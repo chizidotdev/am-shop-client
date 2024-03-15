@@ -7,6 +7,14 @@ import { EditProduct } from "./edit-product";
 import { ProductImage } from "@/common/product-image";
 
 export const DashboardProductGrid = ({ products }: { products: Product[] }) => {
+  if (!products.length) {
+    return (
+      <div className="h-40 flex justify-center items-center">
+        <Text>No results.</Text>
+      </div>
+    );
+  }
+
   return (
     <div className="dashboard-product-grid gap-5" style={{ gridAutoRows: "1fr" }}>
       {products.map((product) => (

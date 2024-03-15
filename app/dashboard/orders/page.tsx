@@ -4,16 +4,16 @@ import { Text } from "@/ui/text";
 import { ToggleGroup, ToggleGroupItem } from "@/ui/toggle-group";
 import React from "react";
 import { DataTable } from "@/ui/data-table";
-import { FilterOption, FilterOptions } from "@/modules/dashboard/orders/filter-options";
+import { FilterOptions } from "@/modules/dashboard/orders/filter-options";
 import { useDashboard } from "@/modules/dashboard/context-store";
 import { dashboardOrderColumns } from "@/modules/dashboard/orders/table-columns";
 import { EmptyIcon } from "@/common/empty-icon";
+import { useFilter } from "@/common/hooks/useFilter";
 
 export default function DashboardOrders() {
-  const [filter, setFilter] = React.useState<FilterOption>("all");
-  const { orders, isFetchingOrders } = useDashboard();
-
-  const hasOrders = orders.length > 0;
+  const { filter, setFilter } = useFilter<OrderFilterOption>("all");
+  const { getOrders, isFetchingOrders } = useDashboard();
+  const [orders, hasOrders] = getOrders(filter);
 
   let body = <div>Loading...</div>;
 
@@ -45,7 +45,7 @@ export default function DashboardOrders() {
               <ToggleGroup
                 type="single"
                 value={filter}
-                onValueChange={(f: FilterOption) => setFilter(f)}
+                onValueChange={(f: OrderFilterOption) => setFilter(f)}
               >
                 {hasOrders ? (
                   <FilterOptions />

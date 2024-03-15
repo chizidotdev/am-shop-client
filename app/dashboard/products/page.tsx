@@ -11,16 +11,16 @@ import React from "react";
 import { CiGrid41, CiViewTable } from "react-icons/ci";
 import { DataTable } from "@/ui/data-table";
 import { dashboardProductColumns } from "@/modules/dashboard/products/table-columns";
-import { FilterOption, FilterOptions } from "@/modules/dashboard/products/filter-options";
+import { FilterOptions } from "@/modules/dashboard/products/filter-options";
 import { useDashboard } from "@/modules/dashboard/context-store";
 import { WhatsappImport } from "@/modules/dashboard/products/whatsapp-import";
+import { useFilter } from "@/common/hooks/useFilter";
 
 export default function DashboardProducts() {
-  const [filter, setFilter] = React.useState<FilterOption>("all");
+  const { filter, setFilter } = useFilter<ProductFilterOption>("all");
   const [view, setView] = React.useState("grid");
-  const { products, isFetchingProducts } = useDashboard();
-
-  const hasProducts = products.length > 0;
+  const { getProducts, isFetchingProducts } = useDashboard();
+  const [products, hasProducts] = getProducts(filter);
 
   let body = <div>Loading...</div>;
 
@@ -68,7 +68,7 @@ export default function DashboardProducts() {
               <ToggleGroup
                 type="single"
                 value={filter}
-                onValueChange={(f: FilterOption) => setFilter(f)}
+                onValueChange={(f: ProductFilterOption) => setFilter(f)}
               >
                 {hasProducts ? (
                   <FilterOptions filter={filter} setFilter={setFilter} />

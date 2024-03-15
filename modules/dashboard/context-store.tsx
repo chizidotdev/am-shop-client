@@ -1,15 +1,16 @@
 "use client";
-import { useContext, createContext } from "react";
+import { useContext, createContext, useCallback } from "react";
 import { useGetUserStore } from "./settings/useSettings";
 import { useGetProducts } from "./products/useProducts";
 import { useGetStoreOrders } from "./orders/useOrders";
 
+type Resource<T, F> = (filterKey?: F) => readonly [T, boolean];
 type DashboardContextType = {
   store: Store | null;
   isFetchingStore: boolean;
-  products: Product[];
+  getProducts: Resource<Product[], ProductFilterOption>;
   isFetchingProducts: boolean;
-  orders: VendorOrder[];
+  getOrders: Resource<VendorOrder[], OrderFilterOption>;
   isFetchingOrders: boolean;
   refetch: {
     store: () => void;
@@ -38,7 +39,29 @@ export const DashboardProvider = ({ children }: { children: React.ReactNode }) =
     isLoading: isFetchingProducts,
     refetch: refetchProducts,
   } = useGetProducts(store);
-  const products = productsResponse?.data || [];
+  const getProducts = useCallback(
+    (filterKey?: ProductFilterOption) => {
+      const result = productsResponse?.data || [];
+      const hasProducts = !!result.length;
+
+      let products: Product[] = result;
+
+      if (filterKey === "inStock") {
+        products = result.filter((p) => !p.outOfStock);
+      }
+
+      if (filterKey === "outOfStock") {
+        products = result.filter((p) => p.outOfStock);
+      }
+
+      if (filterKey === "archive") {
+        products = result;
+      }
+
+      return [products, hasProducts] as const;
+    },
+    [productsResponse],
+  );
 
   // Orders data
   const {
@@ -46,7 +69,25 @@ export const DashboardProvider = ({ children }: { children: React.ReactNode }) =
     isLoading: isFetchingOrders,
     refetch: refetchOrders,
   } = useGetStoreOrders(store);
-  const orders = ordersResponse?.data || [];
+  const getOrders = useCallback(
+    (filterKey?: OrderFilterOption) => {
+      const result = ordersResponse?.data || [];
+      const hasOrders = !!result.length;
+
+      let orders: VendorOrder[] = result;
+
+      if (filterKey === "pending") {
+        orders = result.filter((o) => o.status !== "delivered");
+      }
+
+      if (filterKey === "fulfilled") {
+        orders = result.filter((o) => o.status === "delivered");
+      }
+
+      return [orders, hasOrders] as const;
+    },
+    [ordersResponse],
+  );
 
   const refetch = {
     store: refetchStore,
@@ -59,9 +100,9 @@ export const DashboardProvider = ({ children }: { children: React.ReactNode }) =
       value={{
         store,
         isFetchingStore,
-        products,
+        getProducts,
         isFetchingProducts,
-        orders,
+        getOrders,
         isFetchingOrders,
         refetch,
       }}
