@@ -1,20 +1,27 @@
 "use client";
 import { useSearchStores } from "@/modules/store-front/useStore";
 import { Avatar, AvatarFallback, AvatarImage } from "@/ui/avatar";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Text } from "@/ui/text";
 import { cn } from "@/lib/utils";
 import { Input } from "@/ui/input";
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import { useRouter } from "next/navigation";
 import { useDebounce } from "../hooks/useDebounce";
+import { Skeleton } from "@/ui/skeleton";
 
 export const StorefrontSearch = ({ className }: { className?: string }) => {
   const [open, setOpen] = useState(false);
-  const { mutate, data } = useSearchStores();
+  const [isTyping, setIsTyping] = useState(false);
+  const { mutate, isPending, data } = useSearchStores();
   const findStores = useDebounce(mutate, 1000);
   const stores = data?.data || [];
-  const showResults = open && !!stores.length;
+
+  useEffect(() => {
+    if (!data || isPending) {
+      setIsTyping(true);
+    } else setIsTyping(false);
+  }, [isPending, data]);
 
   const onChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
     const q = e.target.value;
@@ -28,18 +35,30 @@ export const StorefrontSearch = ({ className }: { className?: string }) => {
       <div
         className={cn(
           "focus-within:z-20 flex flex-col w-full border rounded-lg relative",
-          showResults && "border-background shadow-sm",
+          open && "border-background shadow-sm",
         )}
+        onKeyDown={() => setIsTyping(true)}
         onFocus={() => setOpen(true)}
         onBlur={() => setOpen(false)}
       >
         <div
           className={cn(
-            "max-h-[300px] overflow-y-auto overflow-x-hidden p-2 hidden absolute top-0 pt-12 border rounded-lg w-full z-0",
+            "max-h-[300px] overflow-y-auto overflow-x-hidden p-2 hidden absolute top-0 pt-12 pb-4 border rounded-lg w-full z-0",
             "flex-col bg-background gap-2",
-            showResults && "flex",
+            open && "flex",
           )}
         >
+          <div className="mx-2 space-y-2">
+            {isTyping ? (
+              <>
+                <Skeleton className="h-7 w-full" />
+                <Skeleton className="h-7 w-full" />
+                <Skeleton className="h-7 w-full" />
+              </>
+            ) : !stores.length ? (
+              <Text asLabel>No results.</Text>
+            ) : null}
+          </div>
           {stores.map((store) => (
             <SearchItem key={store.id} item={store} />
           ))}

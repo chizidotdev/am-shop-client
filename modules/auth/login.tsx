@@ -18,10 +18,9 @@ import { UserMenu } from "./user-menu";
 
 export const Login = ({ children }: { children?: React.ReactNode }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const { isSuccess, isLoading, login } = useGoogleLogin();
 
   return (
-    <Dialog open={isOpen && !isSuccess} onOpenChange={setIsOpen}>
+    <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger>
         {children ? children : <Button variant="outline">Sign In</Button>}
       </DialogTrigger>
@@ -35,18 +34,30 @@ export const Login = ({ children }: { children?: React.ReactNode }) => {
         </DialogHeader>
 
         <div className="py-4 mx-auto">
-          <Button
-            variant="outline"
-            className="gap-2 items-center px-6 w-full"
-            onClick={login}
-            disabled={isLoading}
-          >
-            {isLoading ? <FaCircleNotch className="animate-spin" /> : <FcGoogle size={18} />}
-            <span className="">Continue with Google</span>
-          </Button>
+          <LoginContent setIsOpen={setIsOpen} />
         </div>
       </DialogContent>
     </Dialog>
+  );
+};
+
+const LoginContent = ({
+  setIsOpen,
+}: {
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
+  const { isLoading, login } = useGoogleLogin(()=> setIsOpen(false));
+
+  return (
+    <Button
+      variant="outline"
+      className="gap-2 items-center px-6 w-full"
+      onClick={login}
+      disabled={isLoading}
+    >
+      {isLoading ? <FaCircleNotch className="animate-spin" /> : <FcGoogle size={18} />}
+      <span className="">Continue with Google</span>
+    </Button>
   );
 };
 

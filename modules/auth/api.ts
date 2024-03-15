@@ -16,15 +16,13 @@ export const signOut = async <T = APIResponse<null>>(): Promise<T> => {
   return response.data;
 };
 
-export const useGoogleLogin = () => {
+export const useGoogleLogin = (cb: () => void) => {
   const [isLoading, setIsLoading] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
   const { update } = useSession();
 
   useEffect(() => {
     return () => {
       setIsLoading(false);
-      setIsSuccess(false);
     };
   }, []);
 
@@ -45,11 +43,11 @@ export const useGoogleLogin = () => {
         setIsLoading(false);
         if (href?.includes("success=true")) {
           update();
-          setIsSuccess(true);
+          cb();
         }
       }
     }, 1000);
   }
 
-  return { isSuccess, isLoading, login };
+  return { isLoading, login };
 };

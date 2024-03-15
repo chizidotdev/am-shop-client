@@ -6,19 +6,46 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/ui/accordion";
 import { formatCurrency, formatDate } from "@/lib/utils";
 import { OrderStatusBadge, PaymentStatusBadge } from "@/common/status-badge";
+import { Skeleton } from "@/ui/skeleton";
+import { EmptyIcon } from "@/common/empty-icon";
+import { Button } from "@/ui/button";
+import Link from "next/link";
 
 export default function Orders() {
   const { data, isLoading } = useGetOrders();
 
-  // if (isLoading) {
-
-  // }
+  if (isLoading) {
+    return (
+      <div className="flex flex-col gap-5">
+        <Text variant="h1">Orders</Text>
+        <div className="flex flex-col gap-3">
+          <Skeleton className="h-10 w-full max-w-xl" />
+          <Skeleton className="h-10 w-full max-w-xl" />
+          <Skeleton className="h-10 w-full max-w-xl" />
+          <Skeleton className="h-10 w-full max-w-xl" />
+        </div>
+      </div>
+    );
+  }
 
   const orders = data?.data;
 
   return (
     <div className="flex flex-col gap-5">
       <Text variant="h1">Orders</Text>
+
+      {!orders?.length && (
+        <div className="flex flex-col justify-center items-center text-center max-w-lg mx-auto my-10">
+          <EmptyIcon />
+          <Text variant="h4">No Orders found</Text>
+          <Text className="mt-2">
+            This is where you’ll be able to view your orders, track their status, and more.
+          </Text>
+          <Link href="/">
+            <Button className="mt-2">Continue Shopping</Button>
+          </Link>
+        </div>
+      )}
 
       <Accordion type="single" collapsible className="max-w-xl">
         {orders?.map((order) => (
